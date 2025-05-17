@@ -44,10 +44,10 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
       ref={spriteRef}
       anchor={0.5}
       eventMode={"static"}
-      onClick={onClick}
+      onPointerTap={onClick}
       onPointerOver={onPointerOver}
       onPointerOut={onPointerOut}
-      scale={isActive && isHovered ? scale.hover : scale.default}
+      scale={isActive ? scale.hover : scale.default}
       tint={isHovered ? 0x00ffff : 0xffffff}
       texture={texture}
       height={height}
