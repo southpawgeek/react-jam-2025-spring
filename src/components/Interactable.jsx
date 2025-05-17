@@ -3,10 +3,9 @@ import { useEffect, useRef, useState } from "react"
 import images from "../data/images"
 import npcs from "../data/npcs"
 import useGame from "../hooks/useGame"
-import { DEFAULT_TEXT } from "../data/constants"
 
 const Interactable = ({ x, y, height, width, name = "wonda" }) => {
-  const { setCurrentText } = useGame()
+  const { setCurrentText, currentScene } = useGame()
   const spriteRef = useRef(null)
 
   const [texture, setTexture] = useState(Texture.EMPTY)
@@ -36,7 +35,7 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
   }
   const onPointerOut = () => {
     setIsHover(false)
-    setCurrentText(DEFAULT_TEXT)
+    setCurrentText(currentScene.defaultText)
   }
 
   return (
