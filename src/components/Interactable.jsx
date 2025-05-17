@@ -27,6 +27,7 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
 
   const onClick = () => {
     setIsActive(!isActive)
+    setCurrentText(npcs[name].initialGreeting)
   }
 
   const onPointerOver = () => {
@@ -35,7 +36,8 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
   }
   const onPointerOut = () => {
     setIsHover(false)
-    setCurrentText(currentScene.defaultText)
+    // setCurrentText(currentScene.defaultText)
+    setIsActive(false)
   }
 
   return (
@@ -47,7 +49,7 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
       onClick={onClick}
       onPointerOver={onPointerOver}
       onPointerOut={onPointerOut}
-      scale={isActive ? scale.hover : scale.default}
+      scale={isActive && isHovered ? scale.hover : scale.default}
       tint={isHovered ? 0x00ffff : 0xffffff}
       texture={texture}
       height={height}
