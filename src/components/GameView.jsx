@@ -1,6 +1,7 @@
 import { Application, extend } from "@pixi/react"
 import { Container, Graphics, Sprite } from "pixi.js"
-import Interactable from "./Interactable"
+import { useRef } from "react"
+import Scene from "./Scene"
 
 extend({
   Container,
@@ -9,41 +10,19 @@ extend({
 })
 
 const GameView = () => {
+  const divRef = useRef(null)
   return (
-    <Application>
-      <pixiContainer>
-        <Interactable
-          x={100}
-          y={100}
-          name="fred"
-        />
-        <Interactable
-          x={100}
-          y={200}
-          name="wonda"
-        />
-        <Interactable
-          x={300}
-          y={200}
-          name="biggy"
-        />
-        <Interactable
-          x={300}
-          y={400}
-          name="capsly"
-        />
-        <Interactable
-          x={200}
-          y={500}
-          name="dotti"
-        />
-        <Interactable
-          x={600}
-          y={300}
-          name="fab"
-        />
-      </pixiContainer>
-    </Application>
+    <div
+      ref={divRef}
+      style={{ width: "800px", height: "600px", position: "absolute" }}
+    >
+      <Application
+        resizeTo={divRef}
+        backgroundColor={0x006666}
+      >
+        <Scene />
+      </Application>
+    </div>
   )
 }
 

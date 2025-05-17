@@ -45,6 +45,7 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
       anchor={0.5}
       eventMode={"static"}
       onPointerTap={onClick}
+      onClick={onClick}
       onPointerOver={onPointerOver}
       onPointerOut={onPointerOut}
       scale={isActive ? scale.hover : scale.default}
