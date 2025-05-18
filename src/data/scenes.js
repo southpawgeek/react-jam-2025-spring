@@ -47,6 +47,27 @@ const scenes = {
       },
     ],
   },
+  scene4: {
+    name: "Beard King Castle",
+    defaultText: "This is the Beard King's castle.",
+    npcs: [
+      {
+        name: "bk",
+        x: 700,
+        y: 200,
+      },
+      {
+        name: "winry",
+        x: 400,
+        y: 100,
+      },
+      {
+        name: "oscar",
+        x: 100,
+        y: 200,
+      },
+    ],
+  },
 }
 
 export default scenes

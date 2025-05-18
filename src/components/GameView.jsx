@@ -18,7 +18,7 @@ const GameView = () => {
     >
       <Application
         resizeTo={divRef}
-        backgroundColor={0x006666}
+        backgroundColor={0x051f39}
       >
         <Scene />
       </Application>

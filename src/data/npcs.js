@@ -5,6 +5,9 @@ export const npcs = {
   fab: { name: "Fab", initialGreeting: "I can't find a good hot dog stand!" },
   fred: { name: "Fred", initialGreeting: "..." },
   wonda: { name: "Wonda", initialGreeting: "Oh... not today." },
+  bk: { name: "BK", initialGreeting: "I'm the Beard King!" },
+  winry: { name: "Winry", initialGreeting: "GrrRrRrRrr" },
+  oscar: { name: "Oscar", initialGreeting: "MUSTARD." },
 }
 
 export default npcs
