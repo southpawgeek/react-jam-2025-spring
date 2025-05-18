@@ -3,7 +3,7 @@ import { useState } from "react"
 import scenes from "../data/scenes"
 
 const GameProvider = ({ children }) => {
-  const [currentScene, setCurrentScene] = useState(scenes.scene1)
+  const [currentScene, setCurrentScene] = useState(scenes.bgCoffee)
   const [currentText, setCurrentText] = useState(currentScene.defaultText)
 
   return (

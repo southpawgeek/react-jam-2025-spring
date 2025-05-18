@@ -1,17 +1,18 @@
 const scenes = {
-  scene1: {
-    name: "Food Court",
-    defaultText: "This is a mall food court.",
+  bgCoffee: {
+    name: "Coffee Shop",
+    defaultText: "The outdoor seating is nice.",
+    background: "bgCoffee",
     npcs: [
       {
         name: "fred",
-        x: 100,
-        y: 100,
+        x: 120,
+        y: 310,
       },
       {
         name: "wonda",
-        x: 200,
-        y: 200,
+        x: 300,
+        y: 320,
       },
     ],
   },

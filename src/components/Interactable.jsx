@@ -27,7 +27,7 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
 
   const onClick = () => {
     setIsActive(!isActive)
-    setCurrentText(npcs[name].initialGreeting)
+    setCurrentText(`${npcs[name].name}: ${npcs[name].initialGreeting}`)
   }
 
   const onPointerOver = () => {
@@ -36,7 +36,6 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
   }
   const onPointerOut = () => {
     setIsHover(false)
-    // setCurrentText(currentScene.defaultText)
     setIsActive(false)
   }
 

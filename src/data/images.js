@@ -7,6 +7,7 @@ import npcWonda from "../assets/npc-public-wonda.png"
 import npcBeardKing from "../assets/npc-public-bk.png"
 import npcWinry from "../assets/npc-public-winry.png"
 import npcOscar from "../assets/npc-public-oscar.png"
+import bgCoffee from "../assets/bg-coffee-shop.png"
 
 const images = {
   biggy: { src: npcBiggy, scale: 0.1 },
@@ -18,6 +19,7 @@ const images = {
   bk: { src: npcBeardKing, scale: 0.1 },
   winry: { src: npcWinry, scale: 0.1 },
   oscar: { src: npcOscar, scale: 0.1 },
+  bgCoffee: { src: bgCoffee, scale: 0.5 },
 }
 
 export default images

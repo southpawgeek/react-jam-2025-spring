@@ -3,11 +3,27 @@
   src: url(/happy-monkey.ttf);
 }
 
+
+
 :root {
   background: black;
   color: white;
   font-family: monkey, sans-serif;
   font-size: 20px;
+
+  --darkest: #051f39;
+  --medium1: #4a2480;
+  --medium2: #c53a9d;
+  --lightest: #ff8e80;
+}
+
+a {
+  color: var(--medium2);
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  color: var(--lightest);
 }
 
 h1 {
@@ -16,6 +32,17 @@ h1 {
   right: 25px;
   margin: 0;
   font-size: 1.25rem;
+}
+
+h3 {
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 0.25rem;
 }
 
 #text-box {
@@ -36,6 +63,10 @@ h1 {
   right: 25px;
   text-align: right;
   font-size: 0.75rem;
-  list-style-type: none;
   cursor: pointer;
+}
+
+#credits {
+  font-size: 0.7rem;
+  margin: 0;
 }
