@@ -1,4 +1,4 @@
-export const npcs = {
+const npcs = {
   biggy: { name: "Biggy", initialGreeting: "What are you looking at?" },
   capsly: { name: "Capsly", initialGreeting: "Don't you like my hat?" },
   dotti: { name: "Dotti", initialGreeting: "Hey!" },
