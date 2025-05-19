@@ -1,21 +1,14 @@
 import GameProvider from "./components/GameProvider"
-import GameView from "./components/GameView"
-import GameUi from "./components/GameUi"
+import Credits from "./components/Credits"
+import Display from "./components/Display"
 
 const App = () => {
   return (
     <GameProvider>
-      <div
-        style={{
-          width: "800px",
-          height: "600px",
-          margin: "auto",
-          position: "relative",
-        }}
-      >
-        <GameView />
-        <GameUi />
+      <div id="main">
+        <Display />
       </div>
+      <Credits />
     </GameProvider>
   )
 }
