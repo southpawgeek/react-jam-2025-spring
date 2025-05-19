@@ -9,17 +9,23 @@ import Win from "./Win"
 const Display = () => {
   const { displayType } = useGame()
 
-  if (displayType === "title") return <Title />
-  if (displayType === "briefing") return <Briefing />
-  if (displayType === "map")
-    return (
-      <>
-        <GameView />
-        <GameUi />
-      </>
-    )
-  if (displayType === "lose") return <Lose />
-  if (displayType === "win") return <Win />
+  switch (displayType) {
+    case "title":
+      return <Title />
+    case "briefing":
+      return <Briefing />
+    case "map":
+      return (
+        <>
+          <GameView />
+          <GameUi />
+        </>
+      )
+    case "lose":
+      return <Lose />
+    case "win":
+      return <Win />
+  }
 }
 
 export default Display
