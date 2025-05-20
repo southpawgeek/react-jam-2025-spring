@@ -16,30 +16,27 @@ const scenes = {
       },
     ],
   },
-  scene2: {
-    name: "Run-Down Park",
-    defaultText: "This is a park.",
+  bgRussia: {
+    name: "Russia",
+    defaultText: "An ornate building can be seen in the distance.",
+    background: "bgRussia",
     npcs: [
       {
-        name: "biggy",
-        x: 300,
-        y: 100,
-      },
-      {
-        name: "capsly",
-        x: 400,
+        name: "wonda",
+        x: 100,
         y: 200,
       },
       {
-        name: "dotti",
-        x: 500,
-        y: 100,
+        name: "fred",
+        x: 300,
+        y: 200,
       },
     ],
   },
-  scene3: {
-    name: "Sketchy Beach",
-    defaultText: "This is a weird beach.",
+  bgTrain: {
+    name: "Train Station",
+    defaultText: "There aren't too many people here.",
+    background: "bgTrain",
     npcs: [
       {
         name: "fab",
@@ -49,8 +46,8 @@ const scenes = {
     ],
   },
   scene4: {
-    name: "Beard King Castle",
-    defaultText: "This is the Beard King's castle.",
+    name: "Scene 4",
+    defaultText: "Description 4 goes here",
     npcs: [
       {
         name: "bk",
@@ -69,6 +66,34 @@ const scenes = {
       },
     ],
   },
+  scene5: {
+    name: "Scene 5",
+    defaultText: "Description 5 goes here",
+    npcs: [
+      {
+        name: "fab",
+        x: 600,
+        y: 200,
+      },
+    ],
+  },
+  scene6: {
+    name: "Scene 6",
+    defaultText: "Description 6 goes here",
+    npcs: [
+      {
+        name: "fab",
+        x: 600,
+        y: 200,
+      },
+    ],
+  },
 }
+
+export const levels = [
+  [scenes.bgCoffee],
+  [scenes.bgRussia, scenes.bgTrain],
+  [scenes.scene4, scenes.scene5, scenes.scene6],
+]
 
 export default scenes

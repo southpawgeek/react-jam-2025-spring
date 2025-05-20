@@ -4,7 +4,7 @@ import images from "../data/images"
 import scenes from "../data/scenes"
 import useGame from "../hooks/useGame"
 
-const Background = ({ x, y, height = 600, width = 800, name = "bgCoffee" }) => {
+const Background = ({ x, y, height = 600, width = 800, name }) => {
   const { setCurrentText } = useGame()
   const spriteRef = useRef(null)
 
@@ -15,7 +15,7 @@ const Background = ({ x, y, height = 600, width = 800, name = "bgCoffee" }) => {
   }
 
   useEffect(() => {
-    if (texture === Texture.EMPTY) {
+    if (texture === Texture.EMPTY || texture !== images[name].src) {
       Assets.load(images[name].src).then((result) => {
         setTexture(result)
       })

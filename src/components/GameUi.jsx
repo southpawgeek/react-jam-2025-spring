@@ -1,14 +1,10 @@
 import useGame from "../hooks/useGame"
-import scenes from "../data/scenes"
 
 const GameUi = () => {
-  const { currentText, setCurrentText, currentScene, setCurrentScene, cover } =
+  const { currentText, currentScene, goToScene, cover, availableScenes } =
     useGame()
 
-  const goToScene = (scene) => {
-    setCurrentScene(scenes[scene])
-    setCurrentText(scenes[scene].defaultText)
-  }
+  const isScene = (scene) => currentScene === scene
 
   return (
     <>
@@ -17,14 +13,21 @@ const GameUi = () => {
       <>
         <h2>Locations</h2>
         <ul id="locations-list">
-          {Object.keys(scenes).map((scene) => (
-            <li
-              key={scene}
-              onClick={() => goToScene(scene)}
-            >
-              {currentScene === scenes[scene] ? ">" : null} {scenes[scene].name}
-            </li>
-          ))}
+          {availableScenes.map((scene) => {
+            const current = isScene(scene)
+
+            return (
+              <li
+                key={`scene-${scene.name}`}
+                onClick={current ? null : () => goToScene(scene)}
+                style={{
+                  cursor: current ? "default" : "pointer",
+                }}
+              >
+                {current ? ">" : null} {scene.name}
+              </li>
+            )
+          })}
         </ul>
       </>
       <div id="text-box">{currentText}</div>
