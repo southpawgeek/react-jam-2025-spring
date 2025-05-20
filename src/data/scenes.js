@@ -45,9 +45,10 @@ const scenes = {
       },
     ],
   },
-  scene4: {
-    name: "Scene 4",
-    defaultText: "Description 4 goes here",
+  bgBeach: {
+    name: "Beach",
+    defaultText: "The air is salty and fresh.",
+    background: "bgBeach",
     npcs: [
       {
         name: "bk",
@@ -66,9 +67,10 @@ const scenes = {
       },
     ],
   },
-  scene5: {
-    name: "Scene 5",
-    defaultText: "Description 5 goes here",
+  bgCastle: {
+    name: "Castle",
+    defaultText: "The castle is large and intimidating.",
+    background: "bgCastle",
     npcs: [
       {
         name: "fab",
@@ -77,9 +79,10 @@ const scenes = {
       },
     ],
   },
-  scene6: {
-    name: "Scene 6",
-    defaultText: "Description 6 goes here",
+  bgOffice: {
+    name: "Office",
+    defaultText: "The office is quiet, but there are a few people around.",
+    background: "bgOffice",
     npcs: [
       {
         name: "fab",
@@ -93,7 +96,7 @@ const scenes = {
 export const levels = [
   [scenes.bgCoffee],
   [scenes.bgRussia, scenes.bgTrain],
-  [scenes.scene4, scenes.scene5, scenes.scene6],
+  [scenes.bgBeach, scenes.bgCastle, scenes.bgOffice],
 ]
 
 export default scenes

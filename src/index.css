@@ -73,11 +73,12 @@ ul {
   bottom: 25px;
   left: 25px;
   width: 730px;
-  height: 130px;
+  height: 185px;
   padding: 10px;
   margin: auto;
   background: rgba(0,0,0, 0.5);
   border-radius: 10px;
+  text-align: left;
 }
 
 #cover {
@@ -100,4 +101,49 @@ ul {
   width: 800px;
   font-size: 0.7rem;
   margin: 0 auto;
+}
+
+#briefing {
+  padding: 25px;
+  text-align: center;
+}
+
+.briefing-profile {
+  display: inline-block;
+  width: 200px;
+  height: 320px;
+  border: 1px solid var(--medium1);
+  border-radius: 10px;
+}
+
+#mid-brief {
+  margin: auto;
+  display: inline-block;
+  width: 290px;
+  height: 320px;
+  border-radius: 10px;
+  background: rgba(0,0,0, 0.5);
+  margin: 0 25px;
+}
+
+.keyword {
+  font-weight: bold;
+  color: var(--lightest);
+}
+
+button {
+  background: var(--medium1);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  font-family: monkey, sans-serif;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+button:hover {
+  background: var(--medium2);
 }

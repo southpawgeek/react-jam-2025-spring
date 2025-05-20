@@ -20,9 +20,9 @@ const Debug = () => {
       <span onClick={() => setDisplayType("win")}>[WIN]</span>
       <span onClick={() => setDisplayType("lose")}>[LOSE]</span>
       <br />
-      <span onClick={() => goToLevel(0)}>[LEVEL 0]</span>
-      <span onClick={() => goToLevel(1)}>[LEVEL 1]</span>
-      <span onClick={() => goToLevel(2)}>[LEVEL 2]</span>
+      <span onClick={() => goToLevel(0)}>[LEVEL 1]</span>
+      <span onClick={() => goToLevel(1)}>[LEVEL 2]</span>
+      <span onClick={() => goToLevel(2)}>[LEVEL 3]</span>
       <br />
       <span onClick={() => setCover(0)}>[COVER 0]</span>
       <span onClick={() => setCover(1)}>[COVER 1]</span>

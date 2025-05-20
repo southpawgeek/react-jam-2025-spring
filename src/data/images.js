@@ -10,6 +10,9 @@ import npcOscar from "../assets/npc-public-oscar.png"
 import bgCoffee from "../assets/bg-coffee-shop.png"
 import bgRussia from "../assets/bg-russia.png"
 import bgTrain from "../assets/bg-train-station.png"
+import bgBeach from "../assets/bg-beach.png"
+import bgCastle from "../assets/bg-castle.png"
+import bgOffice from "../assets/bg-office.png"
 
 const images = {
   biggy: { src: npcBiggy, scale: 0.1 },
@@ -24,6 +27,9 @@ const images = {
   bgCoffee: { src: bgCoffee, scale: 0.5 },
   bgRussia: { src: bgRussia, scale: 0.5 },
   bgTrain: { src: bgTrain, scale: 0.5 },
+  bgBeach: { src: bgBeach, scale: 0.5 },
+  bgCastle: { src: bgCastle, scale: 0.5 },
+  bgOffice: { src: bgOffice, scale: 0.5 },
 }
 
 export default images
