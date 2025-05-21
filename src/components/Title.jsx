@@ -4,10 +4,10 @@ const Title = () => {
   const { setDisplayType } = useGame()
 
   return (
-    <div id="title-display">
-      Spy Thing
+    <div id='title-display'>
+      Cloudy Contacts
       <br />
-      <span onClick={() => setDisplayType("briefing")}>[START]</span>
+      <button onClick={() => setDisplayType("briefing")}>BEGIN MISSION</button>
     </div>
   )
 }

@@ -108,7 +108,7 @@ ul {
   position: relative;
   width: 800px;
   height: 600px;
-  background: url('./bg-briefing.png');
+  background: url('../bg-briefing.png');
   background-size: cover;
 }
 
