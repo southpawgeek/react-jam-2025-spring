@@ -105,8 +105,19 @@ ul {
 }
 
 #briefing {
-  padding: 25px;
-  text-align: center;
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background: url('./bg-briefing.png');
+  background-size: cover;
+}
+
+#briefing-text-box {
+  position: relative;
+  top: 60%;
+  width: 685px;
+  height: 185px;
+  margin: auto;
 }
 
 #cover-modal {
@@ -129,6 +140,16 @@ ul {
   border-radius: 10px;
 }
 
+#briefing-level {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  border-bottom: 3px dotted var(--medium1);
+}
+
 #mid-brief {
   margin: auto;
   display: inline-block;
@@ -140,6 +161,7 @@ ul {
 }
 
 .keyword {
+  cursor: help;
   font-weight: bold;
   color: var(--lightest);
 }
@@ -159,4 +181,32 @@ button {
 
 button:hover {
   background: var(--medium2);
+}
+
+[data-keyword]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+[data-keyword]:after {
+  content: attr(data-keyword);
+  color: white;
+  background-color: var(--darkest);
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  min-width: 200px;
+  max-width: 500px;
+  min-height: 50px;
+  font-size: 0.75rem;
+  padding: 5px;
+  box-shadow: 1px 1px 3px #222222;
+  opacity: 0;
+  border: 1px solid var(--lightest);
+  border-radius: 10px;
+  z-index: 99999;
+  visibility: hidden;
+}
+[data-keyword] {
+  position: relative;
 }
