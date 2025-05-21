@@ -7,6 +7,10 @@ import npcWonda from "../assets/npc-public-wonda.png"
 import npcBeardKing from "../assets/npc-public-bk.png"
 import npcWinry from "../assets/npc-public-winry.png"
 import npcOscar from "../assets/npc-public-oscar.png"
+import npcAsuka from "../assets/npc-public-asuka.png"
+import npcBloopsly from "../assets/npc-public-bloopsly.png"
+import npcEliza from "../assets/npc-public-eliza.png"
+import npcTashi from "../assets/npc-public-tashi.png"
 import bgCoffee from "../assets/bg-coffee-shop.png"
 import bgRussia from "../assets/bg-russia.png"
 import bgTrain from "../assets/bg-train-station.png"
@@ -24,6 +28,10 @@ const images = {
   bk: { src: npcBeardKing, scale: 0.1 },
   winry: { src: npcWinry, scale: 0.1 },
   oscar: { src: npcOscar, scale: 0.1 },
+  asuka: { src: npcAsuka, scale: 0.1 },
+  bloopsly: { src: npcBloopsly, scale: 0.1 },
+  eliza: { src: npcEliza, scale: 0.1 },
+  tashi: { src: npcTashi, scale: 0.1 },
   bgCoffee: { src: bgCoffee, scale: 0.5 },
   bgRussia: { src: bgRussia, scale: 0.5 },
   bgTrain: { src: bgTrain, scale: 0.5 },

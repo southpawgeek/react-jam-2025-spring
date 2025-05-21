@@ -1,5 +1,5 @@
 import { GameContext } from "../hooks/useGame"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import scenes, { levels } from "../data/scenes"
 
 const GameProvider = ({ children }) => {

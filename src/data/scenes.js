@@ -1,18 +1,43 @@
 const scenes = {
   bgCoffee: {
-    name: "Coffee Shop",
+    name: "Tokyo - Coffee Shop",
     defaultText: "The outdoor seating is nice.",
     background: "bgCoffee",
     npcs: [
       {
+        name: "fab",
+        x: 100,
+        y: 270,
+      },
+      {
         name: "fred",
-        x: 120,
+        x: 200,
         y: 310,
       },
       {
-        name: "wonda",
+        name: "dotti",
         x: 300,
         y: 320,
+      },
+      {
+        name: "bk",
+        x: 400,
+        y: 310,
+      },
+      {
+        name: "tashi",
+        x: 500,
+        y: 310,
+      },
+      {
+        name: "asuka",
+        x: 600,
+        y: 310,
+      },
+      {
+        name: "eliza",
+        x: 700,
+        y: 310,
       },
     ],
   },

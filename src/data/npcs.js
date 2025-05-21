@@ -8,6 +8,10 @@ const npcs = {
   bk: { name: "BK", initialGreeting: "I'm the Beard King!" },
   winry: { name: "Winry", initialGreeting: "GrrRrRrRrr" },
   oscar: { name: "Oscar", initialGreeting: "MUSTARD." },
+  asuka: { name: "Asuka", initialGreeting: "Hiiii!" },
+  bloopsly: { name: "Bloopsly", initialGreeting: "Quit clowning around." },
+  eliza: { name: "Eliza", initialGreeting: "What?" },
+  tashi: { name: "Tashi", initialGreeting: "Oh?" },
 }
 
 export default npcs
