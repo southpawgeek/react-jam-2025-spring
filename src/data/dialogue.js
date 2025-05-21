@@ -3,16 +3,16 @@ const dialogue = {
     initial: {
       text: "What are you looking at?",
       options: [
-        { text: "You look stylish", next: 1 },
+        { text: "You look stylish", next: "response" },
         { text: "Nothing at all", next: "end" },
-        { text: "You look like my spy contact", reveal: true, next: 2 },
+        { text: "You look like my spy contact", reveal: true, next: "reveal" },
       ],
     },
     response: {
       text: "Thanks, I am a model",
       options: [
         { text: "Oh, cool. See you around", next: "end" },
-        { text: "So is my spy contact, that you?", reveal: true, next: 2 },
+        { text: "So is my spy contact, that you?", reveal: true, next: "reveal" },
       ],
     },
     reveal: {
@@ -22,7 +22,7 @@ const dialogue = {
     afterEnd: {
       text: "Oh, you again?",
       options: [
-        { text: "Are you my contact?", reveal: true, next: 2 },
+        { text: "Are you my contact?", reveal: true, next: "reveal" },
         { text: "Never mind", next: "end" },
       ],
     },
