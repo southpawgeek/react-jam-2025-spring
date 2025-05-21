@@ -5,9 +5,10 @@ const Lose = () => {
 
   return (
     <div id="lose">
-      Hey, you lost
+      <h4>MISSION FAILED</h4>
+      Oh no! You blew your <span className="keyword">Cover</span>!
       <br />
-      <span onClick={() => setDisplayType("briefing")}>[PLAY AGAIN]</span>
+      <button onClick={() => setDisplayType("briefing")}>PLAY AGAIN</button>
     </div>
   )
 }

@@ -1,8 +1,12 @@
 import useGame from "../hooks/useGame"
 
 const Briefing = () => {
-  const { setDisplayType, currentLevel } = useGame()
+  const { setDisplayType, currentLevel, goToLevel } = useGame()
 
+  const startMap = () => {
+    goToLevel(currentLevel)
+    setDisplayType("map")
+  }
   return (
     <div id="briefing">
       <div className="briefing-profile">person 1 goes here</div>
@@ -14,7 +18,7 @@ const Briefing = () => {
         touch with our contact. Be careful. If you say the wrong thing to the
         wrong person, you may blow your <span className="keyword">Cover</span>!
         <br />
-        <button onClick={() => setDisplayType("map")}>START</button>
+        <button onClick={startMap}>START</button>
       </div>
     </div>
   )

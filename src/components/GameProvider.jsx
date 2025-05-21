@@ -1,5 +1,5 @@
 import { GameContext } from "../hooks/useGame"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import scenes, { levels } from "../data/scenes"
 
 const GameProvider = ({ children }) => {
@@ -8,6 +8,7 @@ const GameProvider = ({ children }) => {
   const [displayType, setDisplayType] = useState("title")
   const [currentScene, setCurrentScene] = useState(scenes.bgCoffee)
   const [currentText, setCurrentText] = useState(currentScene.defaultText)
+  const [inDialogue, setInDialogue] = useState(false)
   const [cover, setCover] = useState(3)
 
   const goToLevel = (level) => {
@@ -22,6 +23,13 @@ const GameProvider = ({ children }) => {
   const goToScene = (scene) => {
     setCurrentScene(scene)
     setCurrentText(scene.defaultText)
+  }
+
+  const gameOver = () => {
+    if (cover < 1) {
+      setDisplayType("lose")
+      setCurrentLevel(0)
+    }
   }
 
   return (
@@ -41,6 +49,9 @@ const GameProvider = ({ children }) => {
         cover,
         setCover,
         goToScene,
+        inDialogue,
+        setInDialogue,
+        gameOver,
       }}
     >
       {children}

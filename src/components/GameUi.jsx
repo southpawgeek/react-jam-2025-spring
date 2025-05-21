@@ -1,10 +1,26 @@
 import useGame from "../hooks/useGame"
+import { useState } from "react"
 
 const GameUi = () => {
-  const { currentText, currentScene, goToScene, cover, availableScenes } =
-    useGame()
+  const {
+    currentText,
+    currentScene,
+    goToScene,
+    cover,
+    availableScenes,
+    gameOver,
+  } = useGame()
+  const [coverBlowShow, setCoverBlowShow] = useState(false)
 
   const isScene = (scene) => currentScene === scene
+
+  const handleCoverBlowClick = () => {
+    if (cover < 1) {
+      gameOver()
+    } else {
+      setCoverBlowShow(false)
+    }
+  }
 
   return (
     <>
@@ -30,7 +46,32 @@ const GameUi = () => {
           })}
         </ul>
       </>
-      <div id="text-box">{currentText}</div>
+      <div
+        id="cover-modal"
+        style={{ display: coverBlowShow ? "block" : "none" }}
+      >
+        {cover > 0 ? (
+          <>
+            You lost a <span className="keyword">Cover</span> point. Lose them
+            all and the game is over!
+          </>
+        ) : (
+          <>
+            You blew all your <span className="keyword">Cover</span> :(
+          </>
+        )}
+
+        <br />
+        <button onClick={handleCoverBlowClick}>OK</button>
+      </div>
+      <div id="text-box">
+        {currentText}
+
+        <br />
+        <button onClick={() => setCoverBlowShow(true)}>
+          DEBUG - BLOW COVER
+        </button>
+      </div>
     </>
   )
 }
