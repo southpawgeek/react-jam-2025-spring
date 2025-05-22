@@ -1,6 +1,8 @@
 import { GameContext } from "../hooks/useGame"
 import { useState } from "react"
 import scenes, { levels } from "../data/scenes"
+import dialogue from "../data/dialogue"
+import npcs from "../data/npcs"
 
 const GameProvider = ({ children }) => {
   const [currentLevel, setCurrentLevel] = useState(0)
@@ -8,9 +10,10 @@ const GameProvider = ({ children }) => {
   const [displayType, setDisplayType] = useState("title")
   const [currentScene, setCurrentScene] = useState(scenes.bgCoffee)
   const [currentText, setCurrentText] = useState(currentScene.defaultText)
-  const [inDialogue, setInDialogue] = useState(false)
   const [cover, setCover] = useState(3)
   const [coverBlowShow, setCoverBlowShow] = useState(false)
+  const [inDialogue, setInDialogue] = useState(false)
+  const [currentNpcName, setCurrentNpcName] = useState(null)
 
   const goToLevel = (level) => {
     setCurrentLevel(level)
@@ -19,6 +22,19 @@ const GameProvider = ({ children }) => {
     setCurrentScene(firstScene)
     setCurrentText(firstScene.defaultText)
     setCover(3)
+  }
+
+  const initiateDialogue = (npcName) => {
+    setCurrentNpcName(npcs[npcName].name)
+    setInDialogue(true)
+    const dialogueSet = dialogue[`${npcName}${currentLevel}`]
+    setCurrentText(dialogueSet.initial)
+  }
+
+  const endDialogue = () => {
+    setCurrentNpcName(null)
+    setInDialogue(false)
+    setCurrentText(currentScene.defaultText)
   }
 
   const goToScene = (scene) => {
@@ -54,6 +70,9 @@ const GameProvider = ({ children }) => {
         goToScene,
         inDialogue,
         setInDialogue,
+        initiateDialogue,
+        endDialogue,
+        currentNpcName,
         gameOver,
       }}
     >

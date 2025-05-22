@@ -5,7 +5,8 @@ import npcs from "../data/npcs"
 import useGame from "../hooks/useGame"
 
 const Interactable = ({ x, y, height, width, name = "wonda" }) => {
-  const { setCurrentText, coverBlowShow } = useGame()
+  const { setCurrentText, coverBlowShow, initiateDialogue, inDialogue } =
+    useGame()
   const spriteRef = useRef(null)
 
   const [texture, setTexture] = useState(Texture.EMPTY)
@@ -27,7 +28,7 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
 
   const onClick = () => {
     setIsActive(!isActive)
-    setCurrentText(`${npcs[name].name}: ${npcs[name].initialGreeting}`)
+    initiateDialogue(name)
   }
 
   const onPointerOver = () => {
@@ -39,15 +40,17 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
     setIsActive(false)
   }
 
+  const canInteract = !coverBlowShow && !inDialogue
+
   return (
     <pixiSprite
       ref={spriteRef}
       anchor={0.5}
       eventMode={"static"}
-      onPointerTap={!coverBlowShow && onClick}
-      onClick={!coverBlowShow && onClick}
-      onPointerOver={!coverBlowShow && onPointerOver}
-      onPointerOut={!coverBlowShow && onPointerOut}
+      onPointerTap={canInteract && onClick}
+      onClick={canInteract && onClick}
+      onPointerOver={canInteract && onPointerOver}
+      onPointerOut={canInteract && onPointerOut}
       scale={isActive && isHovered ? scale.hover : scale.default}
       tint={isHovered ? 0xffaaff : 0xffffff}
       texture={texture}

@@ -211,3 +211,15 @@ button:hover {
 [data-keyword] {
   position: relative;
 }
+
+.dialogue-option {
+  margin-bottom: 1rem;
+}
+
+.dialogue-click {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--medium2);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
