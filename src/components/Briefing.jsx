@@ -1,24 +1,40 @@
 import useGame from "../hooks/useGame"
-import Keyword from "./Keyword"
+import BriefingDialogue from "./BriefingDialogue"
+import { useState } from "react"
+
+const NextDialogue = ({ dialogueStep, setDialogueStep }) => {
+  return <button onClick={() => setDialogueStep(dialogueStep + 1)}>NEXT</button>
+}
+
+const StartMap = ({ startMap }) => <button onClick={startMap}>START</button>
 
 const Briefing = () => {
-  const { setDisplayType, currentLevel, goToLevel } = useGame()
+  const { currentLevel, goToLevel, setDisplayType } = useGame()
+  const [dialogueStep, setDialogueStep] = useState(0)
 
   const startMap = () => {
     goToLevel(currentLevel)
     setDisplayType("map")
   }
+
   return (
     <div id="briefing">
       <div id="briefing-text-box">
         <span id="briefing-level">TRANSMISSION LEVEL: {currentLevel + 1}</span>
         <hr />
-        Go to different <Keyword keyword="locations" /> and get in touch with
-        our <Keyword keyword="contact" />. Be careful. If you say the wrong
-        thing to the wrong person, you may blow your <Keyword keyword="cover" />
-        !
+        <BriefingDialogue
+          dialogueStep={dialogueStep}
+          setDialogueStep={setDialogueStep}
+        />
         <br />
-        <button onClick={startMap}>START</button>
+        {dialogueStep !== -1 ? (
+          <NextDialogue
+            dialogueStep={dialogueStep}
+            setDialogueStep={setDialogueStep}
+          />
+        ) : (
+          <StartMap startMap={startMap} />
+        )}
       </div>
     </div>
   )

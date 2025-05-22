@@ -1,7 +1,7 @@
 import keywords from "../data/keywords"
 
 const Keyword = ({ keyword }) => {
-  const term = keywords[keyword]
+  const term = keywords[keyword] || {}
   return (
     <span
       className="keyword"
