@@ -10,6 +10,7 @@ const GameProvider = ({ children }) => {
   const [currentText, setCurrentText] = useState(currentScene.defaultText)
   const [inDialogue, setInDialogue] = useState(false)
   const [cover, setCover] = useState(3)
+  const [coverBlowShow, setCoverBlowShow] = useState(false)
 
   const goToLevel = (level) => {
     setCurrentLevel(level)
@@ -48,6 +49,8 @@ const GameProvider = ({ children }) => {
         setCurrentScene,
         cover,
         setCover,
+        coverBlowShow,
+        setCoverBlowShow,
         goToScene,
         inDialogue,
         setInDialogue,

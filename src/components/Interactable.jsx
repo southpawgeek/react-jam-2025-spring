@@ -5,7 +5,7 @@ import npcs from "../data/npcs"
 import useGame from "../hooks/useGame"
 
 const Interactable = ({ x, y, height, width, name = "wonda" }) => {
-  const { setCurrentText } = useGame()
+  const { setCurrentText, coverBlowShow } = useGame()
   const spriteRef = useRef(null)
 
   const [texture, setTexture] = useState(Texture.EMPTY)
@@ -44,10 +44,10 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
       ref={spriteRef}
       anchor={0.5}
       eventMode={"static"}
-      onPointerTap={onClick}
-      onClick={onClick}
-      onPointerOver={onPointerOver}
-      onPointerOut={onPointerOut}
+      onPointerTap={!coverBlowShow && onClick}
+      onClick={!coverBlowShow && onClick}
+      onPointerOver={!coverBlowShow && onPointerOver}
+      onPointerOut={!coverBlowShow && onPointerOut}
       scale={isActive && isHovered ? scale.hover : scale.default}
       tint={isHovered ? 0xffaaff : 0xffffff}
       texture={texture}

@@ -123,7 +123,8 @@ ul {
 #cover-modal {
   position:relative;
   top: 50%;
-  background: var(--medium2);
+  background: var(--darkest);
+  border: 1px solid var(--medium1);
   border-radius: 10px;
   margin: auto;
   width: 250px;
@@ -204,7 +205,7 @@ button:hover {
   opacity: 0;
   border: 1px solid var(--lightest);
   border-radius: 10px;
-  z-index: 99999;
+  z-index: 200;
   visibility: hidden;
 }
 [data-keyword] {
