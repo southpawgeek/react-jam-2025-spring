@@ -1,4 +1,6 @@
 import useGame from "../hooks/useGame"
+import Keyword from "./Keyword"
+
 const CoverModal = () => {
   const { cover, gameOver, coverBlowShow, setCoverBlowShow } = useGame()
 
@@ -17,12 +19,12 @@ const CoverModal = () => {
     >
       {cover > 0 ? (
         <>
-          You lost a <span className="keyword">Cover</span> point. Lose them all
-          and the game is over!
+          You lost a <strong>Cover</strong> point. Lose them all and the game is
+          over!
         </>
       ) : (
         <>
-          You blew all your <span className="keyword">Cover</span> :(
+          You blew all your <strong>Cover</strong>!
         </>
       )}
 

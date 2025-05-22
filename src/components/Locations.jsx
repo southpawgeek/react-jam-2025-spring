@@ -1,4 +1,8 @@
-const Locations = ({ availableScenes, currentScene, goToScene }) => {
+import useGame from "../hooks/useGame"
+
+const Locations = () => {
+  const { availableScenes, currentScene, goToScene } = useGame()
+
   const isScene = (scene) => currentScene === scene
 
   return (

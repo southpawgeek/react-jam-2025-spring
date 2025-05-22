@@ -4,23 +4,12 @@ import CoverModal from "./CoverModal"
 import Locations from "./Locations"
 
 const GameUi = () => {
-  const {
-    currentText,
-    currentScene,
-    goToScene,
-    cover,
-    availableScenes,
-    setCoverBlowShow,
-  } = useGame()
+  const { currentText, setCoverBlowShow } = useGame()
 
   return (
     <>
-      <Cover cover={cover} />
-      <Locations
-        availableScenes={availableScenes}
-        currentScene={currentScene}
-        goToScene={goToScene}
-      />
+      <Cover />
+      <Locations />
       <CoverModal />
       <div id="text-box">
         {currentText}
