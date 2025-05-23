@@ -122,12 +122,12 @@ ul {
 
 #cover-modal {
   position:relative;
-  top: 50%;
-  background: var(--darkest);
-  border: 1px solid var(--medium1);
+  top: 40%;
+  background: var(--medium1);
+  border: 1px solid var(--darkest);
   border-radius: 10px;
   margin: auto;
-  width: 250px;
+  width: 300px;
   height: 100px;
   padding: 10px;
   z-index: 100;

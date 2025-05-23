@@ -13,6 +13,7 @@ const GameProvider = ({ children }) => {
   const [cover, setCover] = useState(3)
   const [coverBlowShow, setCoverBlowShow] = useState(false)
   const [inDialogue, setInDialogue] = useState(false)
+  const [currentDialogueSet, setCurrentDialogueSet] = useState(null)
   const [currentNpcName, setCurrentNpcName] = useState(null)
 
   const goToLevel = (level) => {
@@ -28,13 +29,28 @@ const GameProvider = ({ children }) => {
     setCurrentNpcName(npcs[npcName].name)
     setInDialogue(true)
     const dialogueSet = dialogue[`${npcName}${currentLevel}`]
+    setCurrentDialogueSet(dialogueSet)
     setCurrentText(dialogueSet.initial)
   }
 
-  const endDialogue = () => {
+  const endDialogue = ({ text = currentScene.defaultText }) => {
     setCurrentNpcName(null)
     setInDialogue(false)
-    setCurrentText(currentScene.defaultText)
+    setCurrentText(text)
+  }
+
+  const revealToNpc = () => {
+    const dialogueSuccess = currentDialogueSet.success
+    const blowCover = currentDialogueSet.blowCover
+    if (blowCover) {
+      setCover(cover - 1)
+      setCoverBlowShow(true)
+    }
+    if (dialogueSuccess) {
+      endDialogue({ text: currentDialogueSet.reveal })
+    } else {
+      endDialogue({ text: currentDialogueSet.reveal })
+    }
   }
 
   const goToScene = (scene) => {
@@ -46,6 +62,7 @@ const GameProvider = ({ children }) => {
     if (cover < 1) {
       setDisplayType("lose")
       setCurrentLevel(0)
+      setCoverBlowShow(false)
     }
   }
 
@@ -72,6 +89,7 @@ const GameProvider = ({ children }) => {
         setInDialogue,
         initiateDialogue,
         endDialogue,
+        revealToNpc,
         currentNpcName,
         gameOver,
       }}

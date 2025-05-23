@@ -5,7 +5,8 @@ import Locations from "./Locations"
 import dialogue from "../data/dialogue"
 
 const GameUi = () => {
-  const { currentText, inDialogue, endDialogue, currentNpcName } = useGame()
+  const { currentText, inDialogue, endDialogue, currentNpcName, revealToNpc } =
+    useGame()
 
   return (
     <>
@@ -19,7 +20,12 @@ const GameUi = () => {
             {currentText}
             <hr />
             <div className="dialogue-option">
-              <span className="dialogue-click">REVEAL</span>
+              <span
+                className="dialogue-click"
+                onClick={revealToNpc}
+              >
+                REVEAL
+              </span>
               {dialogue.reveal}
             </div>
             <div className="dialogue-option">

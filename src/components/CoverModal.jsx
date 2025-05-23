@@ -1,5 +1,4 @@
 import useGame from "../hooks/useGame"
-import Keyword from "./Keyword"
 
 const CoverModal = () => {
   const { cover, gameOver, coverBlowShow, setCoverBlowShow } = useGame()

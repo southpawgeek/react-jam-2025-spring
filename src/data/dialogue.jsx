@@ -11,6 +11,7 @@ const dialogue = {
     reveal:
       "Stay away from me, weirdo! I'll yell you're a spy if you don't get away from me.",
     success: false,
+    blowCover: true,
   },
   dotti0: {
     initial:
@@ -18,6 +19,7 @@ const dialogue = {
     reveal:
       "Wowz, that's kinda a ton to process. I'm fur sure not the sort to deal with anything this serious.",
     success: false,
+    blowCover: true,
   },
   fred0: {
     initial:
@@ -25,11 +27,14 @@ const dialogue = {
     reveal:
       "Don't get me mixed up in whatever risky business you're involved in. My life may be miserable, but I don't need things to get worse!",
     success: false,
+    blowCover: true,
   },
   bk0: {
     initial:
       "Ah, another adorin' fan? I'm not givin' ya a signature so you can sell it, but I'll take a pic with ya.",
     reveal: "Spy? That ya gimmick? Ya lace up the boots and wrestle too?",
+    success: false,
+    blowCover: false,
   },
   tashi0: {
     initial:
@@ -37,6 +42,7 @@ const dialogue = {
     reveal:
       " I can't allow the shadowy things you're involved in to impact my standing in my company. Please never speak to me again.",
     success: false,
+    blowCover: true,
   },
   asuka0: {
     initial:
@@ -44,6 +50,7 @@ const dialogue = {
     reveal:
       "I don't know if you're trying to impress me, but it isn't working. Go away old man!",
     success: false,
+    blowCover: true,
   },
   eliza0: {
     initial:
@@ -51,6 +58,7 @@ const dialogue = {
     reveal:
       "Oh it's you agent! I was strutting my stuff out here for hours hoping to get your attention.",
     success: true,
+    blowCover: false,
   },
   level0success1:
     "It's not easy to say this, but I got the key to the lockbox, but my intentions were found out.They know who I work for and are going to likely try to stop the agency from within, in addition to attempting to find you before you get to the lockbox location.",
