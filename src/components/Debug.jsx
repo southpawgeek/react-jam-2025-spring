@@ -1,7 +1,7 @@
 import useGame from "../hooks/useGame"
 
 const Debug = () => {
-  const { setDisplayType, goToLevel, setCover } = useGame()
+  const { setDisplayType, setCurrentLevel, setCover } = useGame()
 
   return (
     <div
@@ -15,14 +15,15 @@ const Debug = () => {
     >
       <span onClick={() => setDisplayType("title")}>[TITLE]</span>
       <span onClick={() => setDisplayType("briefing")}>[BRIEFING]</span>
-      <span onClick={() => setDisplayType("map")}>[MAP]</span>
+      <span onClick={() => setDisplayType("location")}>[LOCATION]</span>
       <br />
+      <span onClick={() => setDisplayType("map")}>[MAP]</span>
       <span onClick={() => setDisplayType("win")}>[WIN]</span>
       <span onClick={() => setDisplayType("lose")}>[LOSE]</span>
       <br />
-      <span onClick={() => goToLevel(0)}>[LEVEL 1]</span>
-      <span onClick={() => goToLevel(1)}>[LEVEL 2]</span>
-      <span onClick={() => goToLevel(2)}>[LEVEL 3]</span>
+      <span onClick={() => setCurrentLevel(0)}>[LEVEL 1]</span>
+      <span onClick={() => setCurrentLevel(1)}>[LEVEL 2]</span>
+      <span onClick={() => setCurrentLevel(2)}>[LEVEL 3]</span>
       <br />
       <span onClick={() => setCover(0)}>[COVER 0]</span>
       <span onClick={() => setCover(1)}>[COVER 1]</span>

@@ -16,13 +16,17 @@ const GameProvider = ({ children }) => {
   const [currentDialogueSet, setCurrentDialogueSet] = useState(null)
   const [currentNpcName, setCurrentNpcName] = useState(null)
 
-  const goToLevel = (level) => {
-    setCurrentLevel(level)
-    setAvailableScenes(levels[level])
-    const firstScene = levels[level][0]
-    setCurrentScene(firstScene)
-    setCurrentText(firstScene.defaultText)
+  const goToLocation = (index) => {
+    setCurrentScene(availableScenes[index])
+    setCurrentText(availableScenes[index].defaultText)
     setCover(3)
+    setDisplayType("location")
+  }
+
+  const goToMap = () => {
+    setCurrentLevel(currentLevel)
+    setAvailableScenes(levels[currentLevel])
+    setDisplayType("map")
   }
 
   const initiateDialogue = (npcName) => {
@@ -72,7 +76,8 @@ const GameProvider = ({ children }) => {
         currentLevel,
         setCurrentLevel,
         levels,
-        goToLevel,
+        goToLocation,
+        goToMap,
         availableScenes,
         displayType,
         setDisplayType,

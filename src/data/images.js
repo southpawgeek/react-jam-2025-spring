@@ -19,8 +19,20 @@ import bgCoffee from "../assets/bg-coffee-shop.png"
 import bgOffice from "../assets/bg-office.png"
 import bgRussia from "../assets/bg-russia.png"
 import bgTrain from "../assets/bg-train-station.png"
+import bgBriefing0 from "../assets/bg-briefing0.png"
+import bgMap from "../assets/bg-map.png"
+import mapArrow from "../assets/map-arrow.png"
+import mapLabelRussia from "../assets/map-label-russia.png"
+import mapLabelThailand from "../assets/map-label-thailand.png"
 
 const images = {
+  bgBriefing0: { src: bgBriefing0 },
+  bgBriefing1: { src: bgBriefing0 },
+  bgBriefing2: { src: bgBriefing0 },
+  bgMap: { src: bgMap },
+  mapArrow: { src: mapArrow },
+  mapLabelRussia: { src: mapLabelRussia },
+  mapLabelThailand: { src: mapLabelThailand },
   bgBeach: { src: bgBeach, scale: 0.5 },
   bgCastle: { src: bgCastle, scale: 0.5 },
   bgCoffee: { src: bgCoffee, scale: 0.5 },

@@ -104,12 +104,10 @@ ul {
   margin: 0 auto;
 }
 
-#briefing {
+#briefing, #map {
   position: relative;
   width: 800px;
   height: 600px;
-  background: url('../bg-briefing.png');
-  background-size: cover;
 }
 
 #briefing-text-box {
@@ -222,4 +220,21 @@ button:hover {
   color: var(--medium2);
   font-weight: bold;
   margin-right: 0.5rem;
+}
+
+.map-location {
+  position: absolute;
+}
+
+.map-location img {
+  display: block;
+  margin: auto;
+}
+
+.map-label {
+  width: 100px;
+}
+
+.map-arrow {
+  width: 10px;
 }

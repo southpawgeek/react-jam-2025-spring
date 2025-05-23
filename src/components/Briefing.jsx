@@ -1,24 +1,38 @@
 import useGame from "../hooks/useGame"
 import BriefingDialogue from "./BriefingDialogue"
 import { useState } from "react"
+import images from "../data/images"
 
 const NextDialogue = ({ dialogueStep, setDialogueStep }) => {
   return <button onClick={() => setDialogueStep(dialogueStep + 1)}>NEXT</button>
 }
 
-const StartMap = ({ startMap }) => <button onClick={startMap}>START</button>
+const MapButton = () => {
+  const { goToMap } = useGame()
+
+  return <button onClick={goToMap}>NEXT</button>
+}
+
+const LocationButton = () => {
+  const { goToLocation } = useGame()
+
+  return <button onClick={() => goToLocation(0)}>NEXT</button>
+}
 
 const Briefing = () => {
-  const { currentLevel, goToLevel, setDisplayType } = useGame()
+  const { currentLevel } = useGame()
   const [dialogueStep, setDialogueStep] = useState(0)
 
-  const startMap = () => {
-    goToLevel(currentLevel)
-    setDisplayType("map")
-  }
+  const backgroundUrl = images[`bgBriefing${currentLevel}`]
 
   return (
-    <div id="briefing">
+    <div
+      id="briefing"
+      style={{
+        backgroundImage: `url('${backgroundUrl.src}')`,
+        backgroundSize: "cover",
+      }}
+    >
       <div id="briefing-text-box">
         <span id="briefing-level">TRANSMISSION LEVEL: {currentLevel + 1}</span>
         <hr />
@@ -32,8 +46,10 @@ const Briefing = () => {
             dialogueStep={dialogueStep}
             setDialogueStep={setDialogueStep}
           />
+        ) : currentLevel === 0 ? (
+          <LocationButton />
         ) : (
-          <StartMap startMap={startMap} />
+          <MapButton />
         )}
       </div>
     </div>
