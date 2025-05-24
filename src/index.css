@@ -170,12 +170,13 @@ button {
   color: white;
   border: none;
   border-radius: 10px;
-  font-size: 1.25rem;
   font-family: monkey, sans-serif;
+  font-size: 1rem;
   cursor: pointer;
   position: absolute;
   bottom: 10px;
   right: 10px;
+  font-weight: bold;
 }
 
 button:hover {
@@ -233,6 +234,11 @@ button:hover {
 
 .map-label {
   width: 100px;
+}
+
+.map-label:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 .map-arrow {

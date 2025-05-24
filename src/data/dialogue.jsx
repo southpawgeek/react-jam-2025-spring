@@ -85,8 +85,8 @@ export const briefingDialogue = [
       <strong>
         <Keyword keyword="chief" />:{" "}
       </strong>
-      I know that they will be wearing very decorative attire, and their{" "}
-      <Keyword keyword="story" /> is that <em>they're a model</em>.
+      I know that they will be <em>wearing very decorative attire</em>, and
+      their <Keyword keyword="story" /> is that <em>they're a model</em>.
     </>,
     <>
       <strong>
@@ -112,14 +112,88 @@ export const briefingDialogue = [
     </>,
     <>
       <strong>
-        <Keyword keyword={"chief"} />:{" "}
+        <Keyword keyword="chief" />:{" "}
       </strong>
       Still... make sure to only <Keyword keyword="reveal" /> your identity to
       whoever you believe to be your <Keyword keyword="contact" />. Your{" "}
       <Keyword keyword="cover" /> is important to us, and our work.
     </>,
+    <>
+      <strong>
+        <Keyword keyword="chief" />:{" "}
+      </strong>
+      May Lady Luck kiss your soul, Agent.
+    </>,
   ],
-  [<>briefing #2</>],
+  [
+    <>
+      <strong>
+        <Keyword keyword="chief" />:{" "}
+      </strong>
+      Excellent work as always Agent Nougat! Having that key should mean our
+      mission is nearly done, but as your contact relayed, we are under attack.
+      The <Keyword keyword="location" /> of the lockbox and the agent who has
+      access to it has been scrambled.
+    </>,
+    <>
+      <strong>
+        <Keyword keyword="chief" />:{" "}
+      </strong>
+      Our security systems have even failed at HQ. Whatever is in this lockbox,
+      our enemies don't want us to have it, and are doing anything to stop us.
+      This time we're not even sure what exact <Keyword keyword="location" />{" "}
+      your <Keyword keyword="contact" /> will be in.
+    </>,
+    <>
+      <strong>
+        <Keyword keyword="chief" />:{" "}
+      </strong>
+      Within the corrupted intel we got, we know the two possible countries
+      share visa-free entry with each other, and have narrowed it down to Russia
+      and Thailand.
+    </>,
+    <>
+      <strong>
+        <Keyword keyword="chief" />:{" "}
+      </strong>
+      Given the clues our next <Keyword keyword="contact" /> left, we suspect
+      it's either this train station in Thailand, or this public square in
+      Russia. I know it's a lot to ask you to visit both locales, but our
+      options are limited.
+    </>,
+    <>
+      <strong>
+        <Keyword keyword="chief" />:{" "}
+      </strong>
+      This time, the <Keyword keyword="contact" /> should be{" "}
+      <em>wearing a unique accessory</em>, and their <Keyword keyword="story" />{" "}
+      is that they <em>live a care free life</em>.
+    </>,
+    <>
+      <strong>
+        <Keyword keyword="agent" />:{" "}
+      </strong>
+      I can feel my brain meats getting fried already at the amount of variables
+      here, <Keyword keyword="chief" />.
+    </>,
+    <>
+      <strong>
+        <Keyword keyword="chief" />:{" "}
+      </strong>
+      We're facing potential disaster <Keyword keyword="agent" />, this is all
+      we can do. In addition since our enemies got into our system, they know of
+      this mission, there will be <Keyword keyword="counterAgents" />. Please
+      only <Keyword keyword="reveal" /> your identity when you're absolutely
+      certain you've found your <Keyword keyword="contact" />!
+    </>,
+    <>
+      <strong>
+        <Keyword keyword="chief" />:{" "}
+      </strong>
+      I hope you have a four-leaf clover up your keister, and find success yet
+      again.
+    </>,
+  ],
   [<>briefing #3</>],
 ]
 
