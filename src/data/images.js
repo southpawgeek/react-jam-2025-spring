@@ -25,6 +25,7 @@ import mapArrow from "../assets/map-arrow.png"
 import mapLabelRussia from "../assets/map-label-russia.png"
 import mapLabelThailand from "../assets/map-label-thailand.png"
 import title from "../assets/title.png"
+import playerAgent from "../assets/player-agent.png"
 
 const images = {
   title: { src: title },
@@ -35,6 +36,7 @@ const images = {
   mapArrow: { src: mapArrow },
   mapLabelRussia: { src: mapLabelRussia },
   mapLabelThailand: { src: mapLabelThailand },
+  playerAgent: { src: playerAgent, scale: 0.2 },
   bgBeach: { src: bgBeach, scale: 0.5 },
   bgCastle: { src: bgCastle, scale: 0.5 },
   bgCoffee: { src: bgCoffee, scale: 0.5 },

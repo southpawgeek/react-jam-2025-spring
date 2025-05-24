@@ -51,6 +51,8 @@ h3 {
   font-size: 0.8rem;
 }
 
+h4 { font-size: 4rem; }
+
 ul {
     list-style-type: none;
     padding: 0 0.25rem;
@@ -111,7 +113,7 @@ ul {
   margin: 0 auto;
 }
 
-#briefing, #map {
+#briefing, #map, #win, #lose {
   position: relative;
   width: 800px;
   height: 600px;
