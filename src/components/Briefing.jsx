@@ -10,13 +10,13 @@ const NextDialogue = ({ dialogueStep, setDialogueStep }) => {
 const MapButton = () => {
   const { goToMap } = useGame()
 
-  return <button onClick={goToMap}>NEXT</button>
+  return <button onClick={goToMap}>MAP</button>
 }
 
 const LocationButton = () => {
   const { goToLocation } = useGame()
 
-  return <button onClick={() => goToLocation(0)}>NEXT</button>
+  return <button onClick={() => goToLocation(0)}>BEGIN</button>
 }
 
 const Briefing = () => {
