@@ -10,11 +10,16 @@ const Lose = () => {
   return (
     <div
       id="lose"
-      style={{ backgroundImage: `url('${backgroundUrl}')` }}
+      style={{
+        backgroundImage: `url('${backgroundUrl}')`,
+        backgroundPosition: "0 50%",
+      }}
     >
-      <h4 style={{ position: "absolute", right: "0", top: "35%" }}>
-        MISSION FAILED
-      </h4>
+      <img
+        src={images.missionFailed.src}
+        alt="MISSION FAILED"
+        style={{ position: "absolute", right: "0", top: "35%" }}
+      />
       <span style={{ position: "absolute" }}>
         You blew your <Keyword keyword="cover" />!
       </span>

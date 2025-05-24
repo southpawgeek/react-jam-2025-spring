@@ -51,10 +51,16 @@ const GameProvider = ({ children }) => {
       setCoverBlowShow(true)
     }
     if (dialogueSuccess) {
-      endDialogue({ text: currentDialogueSet.reveal })
+      setDisplayType("debriefing")
     } else {
       endDialogue({ text: currentDialogueSet.reveal })
     }
+  }
+
+  const advanceLevel = () => {
+    setCurrentLevel(currentLevel + 1)
+    setAvailableScenes(levels[currentLevel + 1])
+    setDisplayType("briefing")
   }
 
   const goToScene = (scene) => {
@@ -91,6 +97,7 @@ const GameProvider = ({ children }) => {
         levels,
         goToLocation,
         goToMap,
+        advanceLevel,
         availableScenes,
         displayType,
         setDisplayType,

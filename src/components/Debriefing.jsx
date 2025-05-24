@@ -1,5 +1,5 @@
 import useGame from "../hooks/useGame"
-import BriefingDialogue from "./BriefingDialogue"
+import DebriefingDialogue from "./DebriefingDialogue"
 import { useState } from "react"
 import images from "../data/images"
 
@@ -8,23 +8,39 @@ const NextDialogue = ({ dialogueStep, setDialogueStep }) => {
 }
 
 const Debriefing = () => {
-  const { currentLevel } = useGame()
+  const { advanceLevel, currentScene } = useGame()
   const [dialogueStep, setDialogueStep] = useState(0)
 
-  const backgroundUrl = images[`bgBriefing${currentLevel}`]
+  const backgroundUrl = images[currentScene.background]
 
   return (
     <div
-      id="briefing"
+      id="debriefing"
       style={{
         backgroundImage: `url('${backgroundUrl.src}')`,
-        backgroundSize: "cover",
+        backgroundPosition: backgroundUrl.debriefingPosition,
       }}
     >
-      <div id="briefing-text-box">
-        <span id="briefing-level">TRANSMISSION LEVEL: {currentLevel + 1}</span>
-        <hr />
-        <BriefingDialogue
+      <img
+        src={images.playerAgent.src}
+        style={{ width: "300px", position: "absolute", bottom: "10px" }}
+      />
+      <img
+        src={images.eliza.src}
+        style={{
+          width: "300px",
+          position: "absolute",
+          top: "100px",
+          left: "200px",
+        }}
+      />
+      <img
+        src={images.missionComplete.src}
+        alt="MISSION COMPLETE"
+        style={{ position: "absolute", top: "0", right: "0" }}
+      />
+      <div id="text-box">
+        <DebriefingDialogue
           dialogueStep={dialogueStep}
           setDialogueStep={setDialogueStep}
         />
@@ -34,10 +50,11 @@ const Debriefing = () => {
             dialogueStep={dialogueStep}
             setDialogueStep={setDialogueStep}
           />
-        ) : currentLevel === 0 ? (
-          <LocationButton />
         ) : (
-          <MapButton />
+          <>
+            Better get in touch with the Chief...
+            <button onClick={advanceLevel}>CONTINUE</button>
+          </>
         )}
       </div>
     </div>

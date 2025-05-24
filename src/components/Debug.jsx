@@ -15,6 +15,7 @@ const Debug = () => {
     >
       <span onClick={() => setDisplayType("title")}>[TITLE]</span>
       <span onClick={() => setDisplayType("briefing")}>[BRIEFING]</span>
+      <span onClick={() => setDisplayType("debriefing")}>[DEBRIEFING]</span>
       <span onClick={() => setDisplayType("location")}>[LOCATION]</span>
       <br />
       <span onClick={() => setDisplayType("map")}>[MAP]</span>

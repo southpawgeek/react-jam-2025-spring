@@ -1,6 +1,6 @@
 import useGame from "../hooks/useGame"
 import BriefingDialogue from "./BriefingDialogue"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import images from "../data/images"
 
 const NextDialogue = ({ dialogueStep, setDialogueStep }) => {

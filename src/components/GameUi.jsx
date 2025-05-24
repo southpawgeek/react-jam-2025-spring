@@ -13,8 +13,8 @@ const GameUi = () => {
       <Cover />
       <Locations />
       <CoverModal />
-      <div id="text-box">
-        {inDialogue ? (
+      {inDialogue && (
+        <div id="text-box">
           <>
             <strong>{currentNpcName}: </strong>
             {currentText}
@@ -38,10 +38,8 @@ const GameUi = () => {
               <span className="dialogue-option">{dialogue.end}</span>
             </div>
           </>
-        ) : (
-          currentText
-        )}
-      </div>
+        </div>
+      )}
     </>
   )
 }

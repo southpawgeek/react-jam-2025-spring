@@ -6,8 +6,8 @@ const scenes = {
     npcs: [
       {
         name: "fab",
-        x: 100,
-        y: 270,
+        x: 105,
+        y: 285,
       },
       {
         name: "fred",
@@ -16,28 +16,28 @@ const scenes = {
       },
       {
         name: "dotti",
-        x: 300,
-        y: 320,
+        x: 220,
+        y: 500,
       },
       {
         name: "bk",
         x: 400,
-        y: 310,
+        y: 330,
       },
       {
         name: "tashi",
-        x: 500,
-        y: 310,
+        x: 520,
+        y: 270,
       },
       {
         name: "asuka",
         x: 600,
-        y: 310,
+        y: 490,
       },
       {
         name: "eliza",
         x: 700,
-        y: 310,
+        y: 380,
       },
     ],
   },

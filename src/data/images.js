@@ -26,6 +26,8 @@ import mapLabelRussia from "../assets/map-label-russia.png"
 import mapLabelThailand from "../assets/map-label-thailand.png"
 import title from "../assets/title.png"
 import playerAgent from "../assets/player-agent.png"
+import missionComplete from "../assets/mission-complete.png"
+import missionFailed from "../assets/mission-failed.png"
 
 const images = {
   title: { src: title },
@@ -37,9 +39,11 @@ const images = {
   mapLabelRussia: { src: mapLabelRussia },
   mapLabelThailand: { src: mapLabelThailand },
   playerAgent: { src: playerAgent, scale: 0.2 },
+  missionComplete: { src: missionComplete },
+  missionFailed: { src: missionFailed },
   bgBeach: { src: bgBeach, scale: 0.5 },
   bgCastle: { src: bgCastle, scale: 0.5 },
-  bgCoffee: { src: bgCoffee, scale: 0.5 },
+  bgCoffee: { src: bgCoffee, scale: 0.5, debriefingPosition: "90% 55%" },
   bgOffice: { src: bgOffice, scale: 0.5 },
   bgRussia: { src: bgRussia, scale: 0.5 },
   bgTrain: { src: bgTrain, scale: 0.5 },

@@ -3,6 +3,7 @@ import GameView from "./GameView"
 import GameUi from "./GameUi"
 import Title from "./Title"
 import Briefing from "./Briefing"
+import Debriefing from "./Debriefing"
 import Map from "./Map"
 import Lose from "./Lose"
 import Win from "./Win"
@@ -15,6 +16,8 @@ const Display = () => {
       return <Title />
     case "briefing":
       return <Briefing />
+    case "debriefing":
+      return <Debriefing />
     case "map":
       return <Map />
     case "location":

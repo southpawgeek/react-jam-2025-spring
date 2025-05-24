@@ -113,7 +113,7 @@ ul {
   margin: 0 auto;
 }
 
-#briefing, #map, #win, #lose {
+#briefing, #debriefing, #map, #win, #lose {
   position: relative;
   width: 800px;
   height: 600px;

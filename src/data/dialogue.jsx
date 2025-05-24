@@ -60,10 +60,6 @@ const dialogue = {
     success: true,
     blowCover: false,
   },
-  level0success1:
-    "It's not easy to say this, but I got the key to the lockbox, but my intentions were found out.They know who I work for and are going to likely try to stop the agency from within, in addition to attempting to find you before you get to the lockbox location.",
-  level0success2:
-    "You're right, the rats already interfered with our intel systems, it was tough to get even enough info to meet you.",
   level0success3:
     "I'm warmed by your success, but I'm going into hiding and I'm done with this work after this. Stay safe agent.",
   level0success4:
@@ -195,6 +191,36 @@ export const briefingDialogue = [
     </>,
   ],
   [<>briefing #3</>],
+]
+
+export const debriefingDialogue = [
+  [
+    <>
+      <strong>Eliza</strong>: Oh, it's you, Agent! I was strutting my stuff out
+      here for hours hoping to get your attention.
+      <br />
+      <br />
+      It's not easy to say this - I got the key to the lockbox, but my
+      intentions were found out.
+    </>,
+    <>
+      <strong>Eliza</strong>: They know who I work for and are going to likely
+      try to stop the agency from within, in addition to attempting to find you
+      before you get to the lockbox location.
+    </>,
+    <>
+      <strong>Agent Nougat</strong>: You're right, the rats already interfered
+      with our intel systems. It was tough to even get enough info to meet you.
+    </>,
+    <>
+      <strong>Eliza</strong>: I'm warmed by your success, but I'm going into
+      hiding. I'm done with this line of work. Stay safe, Agent.
+    </>,
+    <>
+      <strong>Agent Nougat</strong>: You too, and a ship full of thanks for your
+      service all these years.
+    </>,
+  ],
 ]
 
 export default dialogue
