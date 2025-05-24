@@ -70,6 +70,19 @@ const GameProvider = ({ children }) => {
     }
   }
 
+  const restartGame = () => {
+    setCurrentLevel(0)
+    setAvailableScenes(levels[0])
+    setDisplayType("briefing")
+    setCurrentScene(scenes.bgCoffee)
+    setCurrentText(scenes.bgCoffee.defaultText)
+    setCover(3)
+    setCoverBlowShow(false)
+    setInDialogue(false)
+    setCurrentDialogueSet(null)
+    setCurrentNpcName(null)
+  }
+
   return (
     <GameContext.Provider
       value={{
@@ -97,6 +110,7 @@ const GameProvider = ({ children }) => {
         revealToNpc,
         currentNpcName,
         gameOver,
+        restartGame,
       }}
     >
       {children}

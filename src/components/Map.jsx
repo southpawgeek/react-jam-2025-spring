@@ -1,6 +1,5 @@
 import images from "../data/images"
 import useGame from "../hooks/useGame"
-import { useState } from "react"
 
 const Map = () => {
   const { goToLocation, currentLevel } = useGame()

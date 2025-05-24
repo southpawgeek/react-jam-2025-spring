@@ -5,7 +5,7 @@ import scenes from "../data/scenes"
 import useGame from "../hooks/useGame"
 
 const Background = ({ x, y, height = 600, width = 800, name }) => {
-  const { setCurrentText } = useGame()
+  const { setCurrentText, inDialogue } = useGame()
   const spriteRef = useRef(null)
 
   const [texture, setTexture] = useState(Texture.EMPTY)
@@ -26,8 +26,8 @@ const Background = ({ x, y, height = 600, width = 800, name }) => {
     <pixiSprite
       ref={spriteRef}
       eventMode={"static"}
-      onPointerTap={onClick}
-      onClick={onClick}
+      onPointerTap={!inDialogue && onClick}
+      onClick={!inDialogue && onClick}
       scale={images[name].scale}
       texture={texture}
       height={height}

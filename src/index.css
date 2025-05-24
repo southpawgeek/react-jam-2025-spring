@@ -67,6 +67,13 @@ ul {
 #title-display {
   font-size: 5rem;
   text-align: center;
+  width: 800px;
+  height: 600px;
+  animation: title-pulse 1s ease-in-out infinite;
+}
+
+@keyframes title-pulse {
+  60% {background-size: 77%}
 }
 
 #text-box {

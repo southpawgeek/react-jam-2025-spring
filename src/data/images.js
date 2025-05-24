@@ -24,8 +24,10 @@ import bgMap from "../assets/bg-map.png"
 import mapArrow from "../assets/map-arrow.png"
 import mapLabelRussia from "../assets/map-label-russia.png"
 import mapLabelThailand from "../assets/map-label-thailand.png"
+import title from "../assets/title.png"
 
 const images = {
+  title: { src: title },
   bgBriefing0: { src: bgBriefing0 },
   bgBriefing1: { src: bgBriefing0 },
   bgBriefing2: { src: bgBriefing0 },
