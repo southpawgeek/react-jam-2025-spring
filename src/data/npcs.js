@@ -3,6 +3,7 @@ const npcs = {
   capsly: { name: "Capsly", initialGreeting: "Don't you like my hat?" },
   dotti: { name: "Dotti", initialGreeting: "Hey!" },
   fab: { name: "Fab", initialGreeting: "I can't find a good hot dog stand!" },
+  faina: { name: "Faina", initialGreeting: "N/A" },
   fred: { name: "Fred", initialGreeting: "..." },
   wonda: { name: "Wonda", initialGreeting: "Oh... not today." },
   bk: { name: "BK", initialGreeting: "I'm the Beard King!" },

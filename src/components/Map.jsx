@@ -31,7 +31,7 @@ const Map = () => {
             />
           </div>
           <div
-            class="map-location"
+            className="map-location"
             onClick={() => goToLocation(1)}
             style={{ top: "150px", right: "155px" }}
           >

@@ -42,19 +42,29 @@ const scenes = {
     ],
   },
   bgRussia: {
-    name: "Russia",
+    name: "Russia - Public Square",
     defaultText: "An ornate building can be seen in the distance.",
     background: "bgRussia",
     npcs: [
       {
-        name: "wonda",
+        name: "bloopsly",
         x: 100,
-        y: 200,
+        y: 400,
       },
       {
-        name: "fred",
+        name: "biggy",
+        x: 600,
+        y: 300,
+      },
+      {
+        name: "capsly",
         x: 300,
-        y: 200,
+        y: 500,
+      },
+      {
+        name: "faina",
+        x: 400,
+        y: 300,
       },
     ],
   },

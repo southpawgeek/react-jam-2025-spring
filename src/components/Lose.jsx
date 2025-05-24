@@ -1,9 +1,8 @@
 import useGame from "../hooks/useGame"
 import images from "../data/images"
-import Keyword from "./Keyword"
 
 const Lose = () => {
-  const { restartGame, currentScene } = useGame()
+  const { restartGame, currentScene, currentText, currentNpcName } = useGame()
 
   const backgroundUrl = images[currentScene.background].src
 
@@ -18,15 +17,27 @@ const Lose = () => {
       <img
         src={images.missionFailed.src}
         alt="MISSION FAILED"
-        style={{ position: "absolute", right: "0", top: "35%" }}
+        style={{ position: "absolute", right: "0", top: "0" }}
       />
-      <span style={{ position: "absolute" }}>
-        You blew your <Keyword keyword="cover" />!
-      </span>
       <img
         src={images.playerAgent.src}
         style={{ width: "300px", position: "absolute", bottom: "10px" }}
       />
+      {currentNpcName && (
+        <div
+          style={{
+            position: "absolute",
+            right: "2%",
+            bottom: "20%",
+            width: "500px",
+            backgroundColor: "rgba(0,0,0,0.5)",
+            padding: "10px",
+            borderRadius: "10px",
+          }}
+        >
+          <strong>{currentNpcName}</strong>: {currentText}
+        </div>
+      )}
 
       <button onClick={() => restartGame()}>PLAY AGAIN</button>
     </div>

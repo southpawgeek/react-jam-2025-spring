@@ -60,10 +60,76 @@ const dialogue = {
     success: true,
     blowCover: false,
   },
-  level0success3:
-    "I'm warmed by your success, but I'm going into hiding and I'm done with this work after this. Stay safe agent.",
-  level0success4:
-    "You too, and a ship full of thanks for your service all these years.",
+  bloopsly1: {
+    initial:
+      "I know it looks like I'm on stilts, but I actually am freakishly tall. Any day now these bones of mine are gonna snap like a twig.",
+    reveal:
+      "I know I'm a clown, but I don't like being treated like a joke. Spy? Come on bro!",
+    success: false,
+    blowCover: false,
+  },
+  biggy1: {
+    initial:
+      "Greetings little man. Do you dare challenge me to a lifting competition?",
+    reveal:
+      "Spy? I have no need to hide in the shadows. I fight everyone head on without fear!",
+    success: false,
+    blowCover: true,
+  },
+  capsly1: {
+    initial: "You're awfully suspicious. Can I see your ID?",
+    reveal:
+      "I knew you were the spy I was looking for. Hand over the key right now, or you'll be hugging my knife.",
+    success: false,
+    blowCover: false,
+    gameOver: true,
+  },
+  faina1: {
+    initial:
+      "How do you do, dear? You have such a cute face, you should shave off that 'stache.",
+    reveal:
+      "You seemed like such a nice boy... why get into this sneaky man nonsense?!",
+    success: false,
+    blowCover: true,
+  },
+  oscar1: {
+    initial:
+      "It's ironic that I'm in a hot dog outfit, because it's so hot in here I FEEL like I'm being grilled!",
+    reveal:
+      "What the heck, man? You thought the girl sweating in a hot dog outfit was a spy?",
+    success: false,
+    blowCover: true,
+  },
+  wonda1: {
+    initial:
+      "I think I recognize you. Yeah, you wouldn't just talk to a stranger if you didn't have a goal, would you?",
+    reveal:
+      "I have a gun in my purse. Hand over the key willingly, or I'll take it off your corpse.",
+    success: false,
+    blowCover: false,
+    gameOver: true,
+  },
+  lalana1: {
+    initial: "You don't get to talk to me unless you're paying for my time.",
+    reveal:
+      "I'm not sure if this is real, or some kink of yours, but I'm not into it AT ALL!",
+    success: false,
+    blowCover: true,
+  },
+  winry1: {
+    initial: "Awoo! Bark Bark Bark! Eyaaaa!",
+    reveal: "n/a",
+    success: true,
+    blowCover: false,
+  },
+  olivia2: {},
+  maya2: {},
+  rusty2: {},
+  trent2: {},
+  lucias2: {},
+  brittany2: {},
+  pete2: {},
+  edgar2: {},
 }
 
 export const briefingDialogue = [

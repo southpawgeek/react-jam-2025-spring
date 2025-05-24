@@ -15,10 +15,14 @@ const GameProvider = ({ children }) => {
   const [inDialogue, setInDialogue] = useState(false)
   const [currentDialogueSet, setCurrentDialogueSet] = useState(null)
   const [currentNpcName, setCurrentNpcName] = useState(null)
+  const [hasRevealed, setHasRevealed] = useState(false)
 
   const goToLocation = (index) => {
     setCurrentScene(availableScenes[index])
     setCurrentText(availableScenes[index].defaultText)
+    setCurrentNpcName(null)
+    setInDialogue(false)
+    setCurrentDialogueSet(null)
     setCover(3)
     setDisplayType("location")
   }
@@ -41,19 +45,25 @@ const GameProvider = ({ children }) => {
     setCurrentNpcName(null)
     setInDialogue(false)
     setCurrentText(text)
+    setHasRevealed(false)
   }
 
   const revealToNpc = () => {
     const dialogueSuccess = currentDialogueSet.success
+    const triggerGameOver = currentDialogueSet?.gameOver
     const blowCover = currentDialogueSet.blowCover
+
+    setHasRevealed(true)
+
     if (blowCover) {
       setCover(cover - 1)
       setCoverBlowShow(true)
-    }
-    if (dialogueSuccess) {
+    } else if (triggerGameOver) {
+      gameOver(true)
+    } else if (dialogueSuccess) {
       setDisplayType("debriefing")
     } else {
-      endDialogue({ text: currentDialogueSet.reveal })
+      setCurrentText(currentDialogueSet.reveal)
     }
   }
 
@@ -68,12 +78,19 @@ const GameProvider = ({ children }) => {
     setCurrentText(scene.defaultText)
   }
 
-  const gameOver = () => {
-    if (cover < 1) {
+  const gameOver = (force) => {
+    if (force) {
+      setCurrentText(currentDialogueSet.reveal)
+    } else {
+      setCurrentText(null)
+      setCurrentNpcName(null)
+    }
+    if (cover < 1 || force) {
       setDisplayType("lose")
       setCurrentLevel(0)
       setCoverBlowShow(false)
     }
+    setHasRevealed(false)
   }
 
   const restartGame = () => {
@@ -109,6 +126,7 @@ const GameProvider = ({ children }) => {
         setCover,
         coverBlowShow,
         setCoverBlowShow,
+        hasRevealed,
         goToScene,
         inDialogue,
         setInDialogue,
