@@ -57,6 +57,7 @@ const GameProvider = ({ children }) => {
 
     if (blowCover) {
       setCover(cover - 1)
+      setCurrentText(currentDialogueSet.reveal)
       setCoverBlowShow(true)
     } else if (triggerGameOver) {
       gameOver(true)
@@ -106,6 +107,11 @@ const GameProvider = ({ children }) => {
     setCurrentNpcName(null)
   }
 
+  const debugSetLevel = (level) => {
+    setCurrentLevel(level)
+    setAvailableScenes(levels[level])
+  }
+
   return (
     <GameContext.Provider
       value={{
@@ -136,6 +142,7 @@ const GameProvider = ({ children }) => {
         currentNpcName,
         gameOver,
         restartGame,
+        debugSetLevel,
       }}
     >
       {children}

@@ -69,14 +69,29 @@ const scenes = {
     ],
   },
   bgTrain: {
-    name: "Train Station",
+    name: "Thailand - Train Station",
     defaultText: "There aren't too many people here.",
     background: "bgTrain",
     npcs: [
       {
-        name: "fab",
-        x: 600,
-        y: 200,
+        name: "oscar",
+        x: 735,
+        y: 355,
+      },
+      {
+        name: "wonda",
+        x: 180,
+        y: 340,
+      },
+      {
+        name: "lalana",
+        x: 100,
+        y: 450,
+      },
+      {
+        name: "winry",
+        x: 550,
+        y: 340,
       },
     ],
   },
@@ -131,7 +146,7 @@ const scenes = {
 export const levels = [
   [scenes.bgCoffee],
   [scenes.bgRussia, scenes.bgTrain],
-  [scenes.bgBeach, scenes.bgCastle, scenes.bgOffice],
+  [scenes.bgBeach, scenes.bgCastle],
 ]
 
 export default scenes

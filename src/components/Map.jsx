@@ -48,6 +48,44 @@ const Map = () => {
           </div>
         </>
       )}
+      {currentLevel === 2 && (
+        <>
+          <div
+            className="map-location"
+            onClick={() => goToLocation(0)}
+            style={{ top: "130px", left: "5px" }}
+          >
+            <img
+              src={images.mapLabelHawaii.src}
+              alt="Hawaii"
+              className="map-label"
+            />
+            <img
+              src={images.mapArrow.src}
+              alt="Arrow"
+              className="map-arrow"
+              style={{ float: "left" }}
+            />
+          </div>
+          <div
+            className="map-location"
+            onClick={() => goToLocation(1)}
+            style={{ top: "35px", left: "295px" }}
+          >
+            <img
+              src={images.mapLabelUk.src}
+              alt="UK"
+              className="map-label"
+              style={{ width: "135px" }}
+            />
+            <img
+              src={images.mapArrow.src}
+              alt="Arrow"
+              className="map-arrow"
+            />
+          </div>
+        </>
+      )}
     </div>
   )
 }

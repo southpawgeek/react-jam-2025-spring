@@ -13,6 +13,7 @@ const npcs = {
   bloopsly: { name: "Bloopsly", initialGreeting: "Quit clowning around." },
   eliza: { name: "Eliza", initialGreeting: "What?" },
   tashi: { name: "Tashi", initialGreeting: "Oh?" },
+  lalana: { name: "Lalana" },
 }
 
 export default npcs

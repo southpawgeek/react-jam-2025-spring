@@ -24,6 +24,8 @@ import bgMap from "../assets/bg-map.png"
 import mapArrow from "../assets/map-arrow.png"
 import mapLabelRussia from "../assets/map-label-russia.png"
 import mapLabelThailand from "../assets/map-label-thailand.png"
+import mapLabelHawaii from "../assets/map-label-hawaii.png"
+import mapLabelUk from "../assets/map-label-uk.png"
 import title from "../assets/title.png"
 import playerAgent from "../assets/player-agent.png"
 import missionComplete from "../assets/mission-complete.png"
@@ -38,6 +40,8 @@ const images = {
   mapArrow: { src: mapArrow },
   mapLabelRussia: { src: mapLabelRussia },
   mapLabelThailand: { src: mapLabelThailand },
+  mapLabelHawaii: { src: mapLabelHawaii },
+  mapLabelUk: { src: mapLabelUk },
   playerAgent: { src: playerAgent, scale: 0.2 },
   missionComplete: { src: missionComplete },
   missionFailed: { src: missionFailed },
