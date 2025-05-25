@@ -127,7 +127,7 @@ const dialogue = {
     success: false,
     blowCover: false,
     gameOver: true,
-    finalText: "You killed an innocent person."
+    finalText: "You killed an innocent person.",
   },
   maya2: {
     initial:
@@ -136,7 +136,7 @@ const dialogue = {
     success: false,
     blowCover: false,
     gameOver: true,
-    finalText: "You killed an innocent drunk person."
+    finalText: "You killed an innocent drunk person.",
   },
   rusty2: {
     initial:
@@ -145,7 +145,7 @@ const dialogue = {
     success: false,
     blowCover: false,
     gameOver: true,
-    finalText: "You killed an innocent slacker."
+    finalText: "You killed an innocent slacker.",
   },
   trent2: {
     initial: "My goth music isn't very popular on the island.",
@@ -153,15 +153,16 @@ const dialogue = {
     success: false,
     blowCover: false,
     gameOver: true,
-    finalText: "You killed an innocent goth."
+    finalText: "You killed an innocent goth.",
   },
   lucias2: {
-    initial: "This place is historical and all, but I just want a sausage roll.",
+    initial:
+      "This place is historical and all, but I just want a sausage roll.",
     reveal: "I knew the vibes were off with this joint!",
     success: false,
     blowCover: false,
     gameOver: true,
-    finalText: "You killed an innocent person."
+    finalText: "You killed an innocent person.",
   },
   brittany2: {
     initial: "Hashtag blessed to be here!",
@@ -169,22 +170,23 @@ const dialogue = {
     success: false,
     blowCover: false,
     gameOver: true,
-    finalText: "You killed an innocent influencer."
+    finalText: "You killed an innocent influencer.",
   },
   pete2: {
-    initial: "I've been hyeah fah bout half a day and still nyot one flippin dragon!",
+    initial:
+      "I've been hyeah fah bout half a day and still nyot one flippin dragon!",
     reveal: "Balls, nah dragon and nyow dis!",
     success: false,
     blowCover: false,
     gameOver: true,
-    finalText: "You killed an innocent person."
+    finalText: "You killed an innocent person.",
   },
   edgar2: {
     initial: "Gyett outta hyeah!",
     reveal: "Ya gyot me in quite the steamy mood bruv! Toss it all!",
     success: true,
     blowCover: false,
-    gameOver: false
+    gameOver: false,
   },
 }
 
@@ -204,7 +206,8 @@ export const briefingDialogue = [
         <Keyword keyword="chief" />:{" "}
       </strong>
       I know that they will be <em>wearing very decorative attire</em>, and
-      their <Keyword keyword="story" /> is that <em>they're a model</em>.
+      their <Keyword keyword="story" /> is that <em>they're a fashion model</em>
+      .
     </>,
     <>
       <strong>

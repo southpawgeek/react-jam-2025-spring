@@ -98,6 +98,11 @@ const GameProvider = ({ children }) => {
     }
   }
 
+  const restartLevel = () => {
+    setCover(3)
+    setDisplayType("map")
+  }
+
   const restartGame = () => {
     setCurrentLevel(0)
     setAvailableScenes(levels[0])
@@ -150,6 +155,7 @@ const GameProvider = ({ children }) => {
         gameOver,
         gameOverText,
         restartGame,
+        restartLevel,
         debugSetLevel,
       }}
     >

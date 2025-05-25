@@ -35,4 +35,10 @@ const keywords = {
   },
 }
 
+export const hints = [
+  ["fashion model", "stylish clothing"],
+  ["care-free life", "unique accessory"],
+  ["long hair", "odd accent"],
+]
+
 export default keywords

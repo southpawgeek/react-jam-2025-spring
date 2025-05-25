@@ -113,7 +113,7 @@ const scenes = {
       {
         name: "trent",
         x: 100,
-        y: 500,
+        y: 450,
       },
       {
         name: "rusty",

@@ -3,6 +3,7 @@ import Cover from "./Cover"
 import CoverModal from "./CoverModal"
 import Locations from "./Locations"
 import dialogue from "../data/dialogue"
+import Hints from "./Hints"
 
 const GameUi = () => {
   const {
@@ -18,6 +19,7 @@ const GameUi = () => {
 
   return (
     <>
+      <Hints />
       <Locations />
       {currentLevel !== 2 && (
         <>
@@ -26,17 +28,17 @@ const GameUi = () => {
         </>
       )}
       {inDialogue && (
-        <div id='text-box'>
+        <div id="text-box">
           <>
             <strong>{currentNpcName}: </strong>
             {currentText}
             <hr />
             {!hasRevealed && (
-              <div className='dialogue-option'>
+              <div className="dialogue-option">
                 {currentLevel < 2 ? (
                   <>
                     <span
-                      className='dialogue-click'
+                      className="dialogue-click"
                       onClick={revealToNpc}
                     >
                       REVEAL
@@ -44,26 +46,27 @@ const GameUi = () => {
                     {dialogue.reveal}
                   </>
                 ) : (
-                    <>
-                                          <span
-                      className='dialogue-click'
+                  <>
+                    <span
+                      className="dialogue-click"
                       onClick={attackNpc}
                     >
                       ATTACK
                     </span>
-                    <strong>Are you sure?</strong> If you injure a civilian, the game is over!
-                    </>
+                    <strong>Are you sure?</strong> If you injure a civilian, the
+                    game is over!
+                  </>
                 )}
               </div>
             )}
-            <div className='dialogue-option'>
+            <div className="dialogue-option">
               <span
-                className='dialogue-click'
+                className="dialogue-click"
                 onClick={endDialogue}
               >
                 END
               </span>
-              <span className='dialogue-option'>{dialogue.end}</span>
+              <span className="dialogue-option">{dialogue.end}</span>
             </div>
           </>
         </div>

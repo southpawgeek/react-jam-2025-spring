@@ -2,7 +2,14 @@ import useGame from "../hooks/useGame"
 import images from "../data/images"
 
 const Lose = () => {
-  const { restartGame, currentScene, currentText, currentNpcName, currentLevel, gameOverText } = useGame()
+  const {
+    restartLevel,
+    currentScene,
+    currentText,
+    currentNpcName,
+    currentLevel,
+    gameOverText,
+  } = useGame()
 
   const backgroundUrl = images[currentScene.background].src
   const npcUrl = images[currentNpcName.toLowerCase()].src
@@ -24,7 +31,17 @@ const Lose = () => {
         src={images.playerAgent.src}
         style={{ width: "300px", position: "absolute", bottom: "10px" }}
       />
-      {currentLevel === 2 && <img src={npcUrl} style={{position: "absolute", bottom: "-100%", scale: "0.2", transform:"rotate(90deg)"}} />}
+      {currentLevel === 2 && (
+        <img
+          src={npcUrl}
+          style={{
+            position: "absolute",
+            bottom: "-100%",
+            scale: "0.2",
+            transform: "rotate(90deg)",
+          }}
+        />
+      )}
       {currentNpcName && (
         <div
           style={{
@@ -37,18 +54,26 @@ const Lose = () => {
             borderRadius: "10px",
           }}
         >
-          {currentLevel === 2 && <>
-            *You pull the trigger, confident that your target is the terrorist.*
-          <br /><br/></>}
+          {currentLevel === 2 && (
+            <>
+              *You pull the trigger, confident that your target is the
+              terrorist.*
+              <br />
+              <br />
+            </>
+          )}
           <strong>{currentNpcName}</strong>: {currentText}
-          {currentLevel === 2 && <>
-            <br /><br />
-            <strong>{gameOverText}</strong>
-          </>}
+          {currentLevel === 2 && (
+            <>
+              <br />
+              <br />
+              <strong>{gameOverText}</strong>
+            </>
+          )}
         </div>
       )}
 
-      <button onClick={() => restartGame()}>PLAY AGAIN</button>
+      <button onClick={() => restartLevel()}>RESTART LEVEL</button>
     </div>
   )
 }
