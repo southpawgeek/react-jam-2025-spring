@@ -8,7 +8,7 @@ const NextDialogue = ({ dialogueStep, setDialogueStep }) => {
 }
 
 const Debriefing = () => {
-  const { advanceLevel, currentScene } = useGame()
+  const { advanceLevel, currentScene, currentLevel } = useGame()
   const [dialogueStep, setDialogueStep] = useState(0)
 
   const backgroundUrl = images[currentScene.background]
@@ -21,19 +21,46 @@ const Debriefing = () => {
         backgroundPosition: backgroundUrl.debriefingPosition,
       }}
     >
-      <img
-        src={images.playerAgent.src}
-        style={{ width: "300px", position: "absolute", bottom: "10px" }}
-      />
-      <img
-        src={images.eliza.src}
-        style={{
-          width: "300px",
-          position: "absolute",
-          top: "100px",
-          left: "200px",
-        }}
-      />
+      {currentLevel === 0 && (
+        <>
+          <img
+            src={images.playerAgent.src}
+            style={{ width: "300px", position: "absolute", bottom: "10px" }}
+          />
+          <img
+            src={images.eliza.src}
+            style={{
+              width: "300px",
+              position: "absolute",
+              top: "100px",
+              left: "200px",
+            }}
+          />
+        </>
+      )}
+      {currentLevel === 1 && (
+        <>
+          <img
+            src={images.playerAgent.src}
+            style={{
+              width: "300px",
+              position: "absolute",
+              bottom: "0",
+              left: "25%",
+              transform: "scaleX(-1)",
+            }}
+          />
+          <img
+            src={images.winry.src}
+            style={{
+              width: "300px",
+              position: "absolute",
+              top: "15%",
+              left: "5%",
+            }}
+          />
+        </>
+      )}
       <img
         src={images.missionComplete.src}
         alt="MISSION COMPLETE"
@@ -44,7 +71,6 @@ const Debriefing = () => {
           dialogueStep={dialogueStep}
           setDialogueStep={setDialogueStep}
         />
-        <br />
         {dialogueStep !== -1 ? (
           <NextDialogue
             dialogueStep={dialogueStep}
@@ -52,7 +78,7 @@ const Debriefing = () => {
           />
         ) : (
           <>
-            Better get in touch with the Chief...
+            Let's go!
             <button onClick={advanceLevel}>CONTINUE</button>
           </>
         )}

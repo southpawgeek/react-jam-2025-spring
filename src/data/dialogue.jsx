@@ -256,7 +256,30 @@ export const briefingDialogue = [
       again.
     </>,
   ],
-  [<>briefing #3</>],
+  [
+    <>
+      <Keyword keyword="chief" />: I'm happier now then when I have a plate of
+      fresh muffins in front of me, <Keyword keyword="agent" />. That formula
+      was for a toxin that our enemies wanted to make a large batch of to cause
+      some real damage.
+    </>,
+    <>
+      <Keyword keyword="chief" />: They may have attacked our intel systems, and
+      tried to stop you, but their efforts have fallen to ash.
+    </>,
+    <>
+      <Keyword keyword="agent" />: You're making my cheeks rosy with
+      embarrassment <Keyword keyword="chief" />, surely &mdash;
+    </>,
+    <>
+      <Keyword keyword="chief" />: What are YOU doing here? Get out of my
+      office! You'll accomplish no &mdash; *gunshot* *static*
+    </>,
+    <>
+      <Keyword keyword="agent" />: CHIEF! CHIEF! Gosh damn, it seems like he's
+      in trouble. I can't delay in checking on him!
+    </>,
+  ],
 ]
 
 export const debriefingDialogue = [
@@ -285,6 +308,20 @@ export const debriefingDialogue = [
     <>
       <strong>Agent Nougat</strong>: You too, and a ship full of thanks for your
       service all these years.
+    </>,
+  ],
+  [
+    <>
+      *<strong>Winry</strong> rolls on her back, revealing a shiny tag. The
+      dog's tag is imprinted with the location of the lockbox.*
+    </>,
+    <>
+      Nougat goes to the lockbox and uses the key to open it. Within the lockbox
+      is a folded paper with a formula on it.
+      <br />
+      <br />
+      <Keyword keyword="agent" />: I suppose this mumbo jumbo is what was so
+      important. I'll contact <Keyword keyword="chief" /> to get confirmation.
     </>,
   ],
 ]

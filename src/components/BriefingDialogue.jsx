@@ -12,16 +12,7 @@ const BriefingDialogue = ({ dialogueStep, setDialogueStep }) => {
     }
   })
 
-  return (
-    briefingDialogue[currentLevel][dialogueStep] || (
-      <>
-        <strong>
-          <Keyword keyword="chief" />:{" "}
-        </strong>
-        We're counting on you.
-      </>
-    )
-  )
+  return briefingDialogue[currentLevel][dialogueStep] || <>Let's go!</>
 }
 
 export default BriefingDialogue

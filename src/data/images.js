@@ -50,7 +50,7 @@ const images = {
   bgCoffee: { src: bgCoffee, scale: 0.5, debriefingPosition: "90% 55%" },
   bgOffice: { src: bgOffice, scale: 0.5 },
   bgRussia: { src: bgRussia, scale: 0.5 },
-  bgTrain: { src: bgTrain, scale: 0.5 },
+  bgTrain: { src: bgTrain, scale: 0.5, debriefingPosition: "120% 55%" },
   asuka: { src: npcAsuka, scale: 0.09 },
   biggy: { src: npcBiggy, scale: 0.09 },
   bk: { src: npcBeardKing, scale: 0.09 },
