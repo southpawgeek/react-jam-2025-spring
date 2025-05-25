@@ -2,16 +2,17 @@ import useGame from "../hooks/useGame"
 import images from "../data/images"
 
 const Lose = () => {
-  const { restartGame, currentScene, currentText, currentNpcName } = useGame()
+  const { restartGame, currentScene, currentText, currentNpcName, currentLevel, gameOverText } = useGame()
 
   const backgroundUrl = images[currentScene.background].src
+  const npcUrl = images[currentNpcName.toLowerCase()].src
 
   return (
     <div
       id="lose"
       style={{
         backgroundImage: `url('${backgroundUrl}')`,
-        backgroundPosition: "0 50%",
+        backgroundPosition: "35% 90%",
       }}
     >
       <img
@@ -23,19 +24,27 @@ const Lose = () => {
         src={images.playerAgent.src}
         style={{ width: "300px", position: "absolute", bottom: "10px" }}
       />
+      {currentLevel === 2 && <img src={npcUrl} style={{position: "absolute", bottom: "-100%", scale: "0.2", transform:"rotate(90deg)"}} />}
       {currentNpcName && (
         <div
           style={{
             position: "absolute",
-            right: "2%",
-            bottom: "20%",
+            right: "25px",
+            bottom: "50px",
             width: "500px",
             backgroundColor: "rgba(0,0,0,0.5)",
             padding: "10px",
             borderRadius: "10px",
           }}
         >
+          {currentLevel === 2 && <>
+            *You pull the trigger, confident that your target is the terrorist.*
+          <br /><br/></>}
           <strong>{currentNpcName}</strong>: {currentText}
+          {currentLevel === 2 && <>
+            <br /><br />
+            <strong>{gameOverText}</strong>
+          </>}
         </div>
       )}
 

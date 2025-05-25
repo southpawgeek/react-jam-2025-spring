@@ -40,8 +40,8 @@ h1 {
 
 h2 {
   position: absolute;
-  top: 70px;
-  right: 25px;
+  top: 0px;
+  left: 25px;
   font-size: 1.15rem;
   font-weight: bold;
 }
@@ -190,6 +190,14 @@ button {
 
 button:hover {
   background: var(--medium2);
+}
+
+#map-button {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  bottom: auto;
+  right: auto;
 }
 
 [data-keyword]:hover:after {

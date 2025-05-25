@@ -16,15 +16,16 @@ const GameProvider = ({ children }) => {
   const [currentDialogueSet, setCurrentDialogueSet] = useState(null)
   const [currentNpcName, setCurrentNpcName] = useState(null)
   const [hasRevealed, setHasRevealed] = useState(false)
+  const [gameOverText, setGameOverText] = useState(null)
 
   const goToLocation = (index) => {
     setCurrentScene(availableScenes[index])
     setCurrentText(availableScenes[index].defaultText)
     setCurrentNpcName(null)
     setInDialogue(false)
-    setCurrentDialogueSet(null)
     setCover(3)
     setDisplayType("location")
+    setHasRevealed(false)
   }
 
   const goToMap = () => {
@@ -34,11 +35,11 @@ const GameProvider = ({ children }) => {
   }
 
   const initiateDialogue = (npcName) => {
-    setCurrentNpcName(npcs[npcName].name)
-    setInDialogue(true)
     const dialogueSet = dialogue[`${npcName}${currentLevel}`]
     setCurrentDialogueSet(dialogueSet)
     setCurrentText(dialogueSet.initial)
+    setCurrentNpcName(npcs[npcName].name)
+    setInDialogue(true)
   }
 
   const endDialogue = ({ text = currentScene.defaultText }) => {
@@ -54,17 +55,28 @@ const GameProvider = ({ children }) => {
     const blowCover = currentDialogueSet.blowCover
 
     setHasRevealed(true)
-
+    setCurrentText(currentDialogueSet.reveal)
     if (blowCover) {
       setCover(cover - 1)
-      setCurrentText(currentDialogueSet.reveal)
       setCoverBlowShow(true)
     } else if (triggerGameOver) {
       gameOver(true)
     } else if (dialogueSuccess) {
       setDisplayType("debriefing")
-    } else {
+    }
+  }
+
+  const attackNpc = () => {
+    const dialogueSuccess = currentDialogueSet.success
+    const triggerGameOver = currentDialogueSet?.gameOver
+
+    if (dialogueSuccess) {
+      setDisplayType("win")
+    }
+    if (triggerGameOver) {
       setCurrentText(currentDialogueSet.reveal)
+      setGameOverText(currentDialogueSet.finalText)
+      gameOver(true)
     }
   }
 
@@ -80,18 +92,10 @@ const GameProvider = ({ children }) => {
   }
 
   const gameOver = (force) => {
-    if (force) {
-      setCurrentText(currentDialogueSet.reveal)
-    } else {
-      setCurrentText(null)
-      setCurrentNpcName(null)
-    }
+    console.log(gameOverText)
     if (cover < 1 || force) {
       setDisplayType("lose")
-      setCurrentLevel(0)
-      setCoverBlowShow(false)
     }
-    setHasRevealed(false)
   }
 
   const restartGame = () => {
@@ -105,6 +109,8 @@ const GameProvider = ({ children }) => {
     setInDialogue(false)
     setCurrentDialogueSet(null)
     setCurrentNpcName(null)
+    setHasRevealed(false)
+    setGameOverText(null)
   }
 
   const debugSetLevel = (level) => {
@@ -139,8 +145,10 @@ const GameProvider = ({ children }) => {
         initiateDialogue,
         endDialogue,
         revealToNpc,
+        attackNpc,
         currentNpcName,
         gameOver,
+        gameOverText,
         restartGame,
         debugSetLevel,
       }}

@@ -33,7 +33,7 @@ const Interactable = ({ x, y, height, width, name = "wonda" }) => {
 
   const onPointerOver = () => {
     setIsHover(true)
-    setCurrentText(npcs[name].name)
+    // setCurrentText(npcs[name].name)
   }
   const onPointerOut = () => {
     setIsHover(false)

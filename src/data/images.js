@@ -17,6 +17,10 @@ import npcMaya from "../assets/npc-public-maya.png"
 import npcOlivia from "../assets/npc-public-olivia.png"
 import npcRusty from "../assets/npc-public-rusty.png"
 import npcTrent from "../assets/npc-public-trent.png"
+import npcBrittany from "../assets/npc-public-brittany.png"
+import npcEdgar from "../assets/npc-public-edgar.png"
+import npcLucias from "../assets/npc-public-lucias.png"
+import npcPete from "../assets/npc-public-pete.png"
 import bgBeach from "../assets/bg-beach.png"
 import bgCastle from "../assets/bg-castle.png"
 import bgCoffee from "../assets/bg-coffee-shop.png"
@@ -74,6 +78,10 @@ const images = {
   olivia: { src: npcOlivia, scale: 0.09 },
   rusty: { src: npcRusty, scale: 0.09 },
   trent: { src: npcTrent, scale: 0.09 },
+  lucias: {src: npcLucias, scale: 0.09},
+  brittany: {src: npcBrittany, scale: 0.09},
+  pete: {src: npcPete, scale: 0.09},
+  edgar: {src: npcEdgar, scale: 0.09},
 }
 
 export default images

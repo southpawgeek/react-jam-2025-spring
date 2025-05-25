@@ -96,7 +96,7 @@ const scenes = {
     ],
   },
   bgBeach: {
-    name: "Beach",
+    name: "USA - Hawaiian Beach",
     defaultText: "The air is salty and fresh.",
     background: "bgBeach",
     npcs: [
@@ -123,14 +123,29 @@ const scenes = {
     ],
   },
   bgCastle: {
-    name: "Castle",
+    name: "UK - Old English Castle",
     defaultText: "The castle is large and intimidating.",
     background: "bgCastle",
     npcs: [
       {
-        name: "fab",
-        x: 600,
-        y: 200,
+        name: "lucias",
+        x: 745,
+        y: 405,
+      },
+      {
+        name: "brittany",
+        x: 210,
+        y: 460,
+      },
+      {
+        name: "pete",
+        x: 100,
+        y: 430,
+      },
+      {
+        name: "edgar",
+        x: 560,
+        y: 400,
       },
     ],
   },

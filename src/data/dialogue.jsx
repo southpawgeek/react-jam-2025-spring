@@ -118,7 +118,6 @@ const dialogue = {
   },
   winry1: {
     initial: "Awoo! Bark Bark Bark! Eyaaaa!",
-    reveal: "n/a",
     success: true,
     blowCover: false,
   },
@@ -128,6 +127,7 @@ const dialogue = {
     success: false,
     blowCover: false,
     gameOver: true,
+    finalText: "You killed an innocent person."
   },
   maya2: {
     initial:
@@ -136,6 +136,7 @@ const dialogue = {
     success: false,
     blowCover: false,
     gameOver: true,
+    finalText: "You killed an innocent drunk person."
   },
   rusty2: {
     initial:
@@ -144,6 +145,7 @@ const dialogue = {
     success: false,
     blowCover: false,
     gameOver: true,
+    finalText: "You killed an innocent slacker."
   },
   trent2: {
     initial: "My goth music isn't very popular on the island.",
@@ -151,11 +153,39 @@ const dialogue = {
     success: false,
     blowCover: false,
     gameOver: true,
+    finalText: "You killed an innocent goth."
   },
-  lucias2: {},
-  brittany2: {},
-  pete2: {},
-  edgar2: {},
+  lucias2: {
+    initial: "This place is historical and all, but I just want a sausage roll.",
+    reveal: "I knew the vibes were off with this joint!",
+    success: false,
+    blowCover: false,
+    gameOver: true,
+    finalText: "You killed an innocent person."
+  },
+  brittany2: {
+    initial: "Hashtag blessed to be here!",
+    reveal: "No amount of Likes is worth this fate!",
+    success: false,
+    blowCover: false,
+    gameOver: true,
+    finalText: "You killed an innocent influencer."
+  },
+  pete2: {
+    initial: "I've been hyeah fah bout half a day and still nyot one flippin dragon!",
+    reveal: "Balls, nah dragon and nyow dis!",
+    success: false,
+    blowCover: false,
+    gameOver: true,
+    finalText: "You killed an innocent person."
+  },
+  edgar2: {
+    initial: "Gyett outta hyeah!",
+    reveal: "Ya gyot me in quite the steamy mood bruv! Toss it all!",
+    success: true,
+    blowCover: false,
+    gameOver: false
+  },
 }
 
 export const briefingDialogue = [

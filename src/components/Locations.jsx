@@ -1,30 +1,12 @@
 import useGame from "../hooks/useGame"
 
 const Locations = () => {
-  const { availableScenes, currentScene, goToScene } = useGame()
-
-  const isScene = (scene) => currentScene === scene
+  const { currentScene, setDisplayType, currentLevel } = useGame()
 
   return (
     <>
-      <h2>Locations</h2>
-      <ul id="locations-list">
-        {availableScenes.map((scene) => {
-          const current = isScene(scene)
-
-          return (
-            <li
-              key={`scene-${scene.name}`}
-              onClick={current ? null : () => goToScene(scene)}
-              style={{
-                cursor: current ? "default" : "pointer",
-              }}
-            >
-              {current ? ">" : null} {scene.name}
-            </li>
-          )
-        })}
-      </ul>
+      <h2>Current Location: {currentScene.name}</h2>
+      {currentLevel > 0 && <button id="map-button" onClick={()=>setDisplayType("map")}>GO TO WORLD MAP</button>}
     </>
   )
 }
