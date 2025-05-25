@@ -1,7 +1,6 @@
 import GameProvider from "./components/GameProvider"
 import Credits from "./components/Credits"
 import Display from "./components/Display"
-import Debug from "./components/Debug"
 
 const App = () => {
   return (
@@ -10,7 +9,6 @@ const App = () => {
         <Display />
       </div>
       <Credits />
-      <Debug />
     </GameProvider>
   )
 }
