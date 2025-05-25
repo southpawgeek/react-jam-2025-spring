@@ -36,6 +36,9 @@ import mapLabelHawaii from "../assets/map-label-hawaii.png"
 import mapLabelUk from "../assets/map-label-uk.png"
 import title from "../assets/title.png"
 import playerAgent from "../assets/player-agent.png"
+import playerAgentNote from "../assets/player-agent-note.png"
+import chiefDead from "../assets/npc-public-chief-dead.png"
+import chiefDeadNote from "../assets/npc-public-chief-dead-note.png"
 import missionComplete from "../assets/mission-complete.png"
 import missionFailed from "../assets/mission-failed.png"
 
@@ -51,6 +54,9 @@ const images = {
   mapLabelHawaii: { src: mapLabelHawaii },
   mapLabelUk: { src: mapLabelUk },
   playerAgent: { src: playerAgent, scale: 0.2 },
+  playerAgentNote: { src: playerAgentNote },
+  chiefDead: { src: chiefDead },
+  chiefDeadNote: { src: chiefDeadNote },
   missionComplete: { src: missionComplete },
   missionFailed: { src: missionFailed },
   bgBeach: { src: bgBeach, scale: 0.5 },

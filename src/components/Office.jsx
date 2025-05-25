@@ -24,9 +24,10 @@ const Office = () => {
       }}
     >
       <img
-        src={images.playerAgent.src}
+        src={dialogueStep === 0 ? images.playerAgent.src : images.playerAgentNote.src}
         style={{ width: "300px", position: "absolute", bottom: "10px" }}
       />
+      <img src={dialogueStep === 0 ? images.chiefDeadNote.src : images.chiefDead.src} style={{width: "250px", position: "absolute", right: "100px", top: "200px"}} />
       <div id="text-box">
         <OfficeDialogue
           dialogueStep={dialogueStep}
