@@ -1,2 +1,2 @@
-vite build --base=/spring2025
-scp -r dist/* southpaw:~/public_html/spring2025
+vite build
+scp -r dist/* southpaw:~/public_html/cloudy-contacts
