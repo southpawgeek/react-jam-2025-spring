@@ -326,4 +326,51 @@ export const debriefingDialogue = [
   ],
 ]
 
+export const officeDialogue = [
+  <>
+    <Keyword keyword="agent" /> No, Chief! I'm too late... he's dead.
+  </>,
+  <>
+    *Nougat finds a note on the floor, next to Chief.*
+    <br />
+    <br />
+    The note reads:
+    <br />
+    <br />
+    <em>
+      There used to be rules in this game, but it seems like our enemies have
+      taken the loss hard, and lashed out violently.
+    </em>
+  </>,
+  <>
+    <em>
+      I don't have much time left, but I must convey that while they don't have
+      the formula to make the toxin, they do have a sample.
+      <br />
+      <br />
+      Their scientist betrayed them and hid the formula, which thankfully you
+      procured, but even a sample can take out a city of people.
+    </em>
+  </>,
+  <>
+    <em>
+      Please get out there, find my killer who has this sample, and take him out
+      before he can use it. I saw him for the moment he was in my office.
+      <br />
+      <br />
+      He has long hair and an accent. He plans to use the toxin in either a
+      tourist castle in the UK, or the busiest beach in Hawaii.
+    </em>
+  </>,
+  <>
+    <em>
+      This will either be an act of heroism or misplaced murder. Please make
+      sure you have the right target before you kill.
+      <br />
+      <br />
+      May heaven guide your bullet.
+    </em>
+  </>,
+]
+
 export default dialogue

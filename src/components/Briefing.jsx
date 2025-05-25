@@ -1,6 +1,6 @@
 import useGame from "../hooks/useGame"
 import BriefingDialogue from "./BriefingDialogue"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import images from "../data/images"
 
 const NextDialogue = ({ dialogueStep, setDialogueStep }) => {
@@ -17,6 +17,12 @@ const LocationButton = () => {
   const { goToLocation } = useGame()
 
   return <button onClick={() => goToLocation(0)}>BEGIN</button>
+}
+
+const OfficeButton = () => {
+  const { setDisplayType } = useGame()
+
+  return <button onClick={() => setDisplayType("office")}>GO HELP CHIEF</button>
 }
 
 const Briefing = () => {
@@ -48,8 +54,10 @@ const Briefing = () => {
           />
         ) : currentLevel === 0 ? (
           <LocationButton />
-        ) : (
+        ) : currentLevel === 1 ? (
           <MapButton />
+        ) : (
+          <OfficeButton />
         )}
       </div>
     </div>
