@@ -100,6 +100,7 @@ const GameProvider = ({ children }) => {
 
   const restartLevel = () => {
     setCover(3)
+    setCoverBlowShow(false)
     setDisplayType("map")
   }
 
