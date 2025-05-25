@@ -14,6 +14,14 @@ const npcs = {
   eliza: { name: "Eliza", initialGreeting: "What?" },
   tashi: { name: "Tashi", initialGreeting: "Oh?" },
   lalana: { name: "Lalana" },
+  olivia: { name: "Olivia" },
+  maya: { name: "Maya" },
+  rusty: { name: "Rusty" },
+  trent: { name: "Trent" },
+  lucias: { name: "Lucias" },
+  brittany: { name: "Brittany" },
+  pete: { name: "Pete" },
+  edgar: { name: "Edgar" },
 }
 
 export default npcs

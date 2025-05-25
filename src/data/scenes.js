@@ -101,19 +101,24 @@ const scenes = {
     background: "bgBeach",
     npcs: [
       {
-        name: "bk",
+        name: "maya",
         x: 700,
-        y: 200,
+        y: 330,
       },
       {
-        name: "winry",
-        x: 400,
-        y: 100,
+        name: "olivia",
+        x: 600,
+        y: 500,
       },
       {
-        name: "oscar",
+        name: "trent",
         x: 100,
-        y: 200,
+        y: 500,
+      },
+      {
+        name: "rusty",
+        x: 300,
+        y: 400,
       },
     ],
   },

@@ -13,6 +13,10 @@ import npcOscar from "../assets/npc-public-oscar.png"
 import npcTashi from "../assets/npc-public-tashi.png"
 import npcWinry from "../assets/npc-public-winry.png"
 import npcWonda from "../assets/npc-public-wonda.png"
+import npcMaya from "../assets/npc-public-maya.png"
+import npcOlivia from "../assets/npc-public-olivia.png"
+import npcRusty from "../assets/npc-public-rusty.png"
+import npcTrent from "../assets/npc-public-trent.png"
 import bgBeach from "../assets/bg-beach.png"
 import bgCastle from "../assets/bg-castle.png"
 import bgCoffee from "../assets/bg-coffee-shop.png"
@@ -66,6 +70,10 @@ const images = {
   tashi: { src: npcTashi, scale: 0.09 },
   winry: { src: npcWinry, scale: 0.09 },
   wonda: { src: npcWonda, scale: 0.09 },
+  maya: { src: npcMaya, scale: 0.09 },
+  olivia: { src: npcOlivia, scale: 0.09 },
+  rusty: { src: npcRusty, scale: 0.09 },
+  trent: { src: npcTrent, scale: 0.09 },
 }
 
 export default images

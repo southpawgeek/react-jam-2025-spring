@@ -12,13 +12,18 @@ const GameUi = () => {
     currentNpcName,
     revealToNpc,
     hasRevealed,
+    currentLevel,
   } = useGame()
 
   return (
     <>
-      <Cover />
       <Locations />
-      <CoverModal />
+      {currentLevel !== 2 && (
+        <>
+          <Cover />
+          <CoverModal />
+        </>
+      )}
       {inDialogue && (
         <div id="text-box">
           <>
