@@ -3,8 +3,22 @@ import { useState } from "react"
 import scenes, { levels } from "../data/scenes"
 import dialogue from "../data/dialogue"
 import npcs from "../data/npcs"
+import useSound from "use-sound"
+import soundBoop from "../assets/sound-boop.wav"
+import soundDead from "../assets/sound-dead.wav"
+import soundExit from "../assets/sound-exit.wav"
+import soundMove from "../assets/sound-move.wav"
+import soundKill from "../assets/sound-explosion.wav"
 
 const GameProvider = ({ children }) => {
+  // sounds
+  const [boop] = useSound(soundBoop)
+  const [cancelBoop] = useSound(soundBoop, { playbackRate: 0.5 })
+  const [done] = useSound(soundExit)
+  const [move] = useSound(soundMove)
+  const [dead] = useSound(soundDead)
+  const [kill] = useSound(soundKill)
+
   const [currentLevel, setCurrentLevel] = useState(0)
   const [availableScenes, setAvailableScenes] = useState(levels[0])
   const [displayType, setDisplayType] = useState("title")
@@ -25,6 +39,7 @@ const GameProvider = ({ children }) => {
     setInDialogue(false)
     setDisplayType("location")
     setHasRevealed(false)
+    move()
   }
 
   const goToMap = () => {
@@ -40,6 +55,7 @@ const GameProvider = ({ children }) => {
     setCurrentText(dialogueSet.initial)
     setCurrentNpcName(npcs[npcName].name)
     setInDialogue(true)
+    boop()
   }
 
   const endDialogue = ({ text = currentScene.defaultText }) => {
@@ -47,6 +63,7 @@ const GameProvider = ({ children }) => {
     setInDialogue(false)
     setCurrentText(text)
     setHasRevealed(false)
+    cancelBoop()
   }
 
   const revealToNpc = () => {
@@ -59,10 +76,13 @@ const GameProvider = ({ children }) => {
     if (blowCover) {
       setCover(cover - 1)
       setCoverBlowShow(true)
+      dead()
     } else if (triggerGameOver) {
       gameOver(true)
+      dead()
     } else if (dialogueSuccess) {
       setDisplayType("debriefing")
+      done()
     }
   }
 
@@ -78,6 +98,7 @@ const GameProvider = ({ children }) => {
       setGameOverText(currentDialogueSet.finalText)
       gameOver(true)
     }
+    kill()
   }
 
   const advanceLevel = () => {
@@ -164,6 +185,11 @@ const GameProvider = ({ children }) => {
         restartGame,
         restartLevel,
         debugSetLevel,
+        boop,
+        cancelBoop,
+        done,
+        move,
+        dead,
       }}
     >
       {children}
