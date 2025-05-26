@@ -101,7 +101,13 @@ const GameProvider = ({ children }) => {
   const restartLevel = () => {
     setCover(3)
     setCoverBlowShow(false)
-    setDisplayType("map")
+    setInDialogue(false)
+    setHasRevealed(false)
+    if (currentLevel === 0) {
+      setDisplayType("location")
+    } else {
+      setDisplayType("map")
+    }
   }
 
   const restartGame = () => {
