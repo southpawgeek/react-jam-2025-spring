@@ -3,6 +3,20 @@ import DebriefingDialogue from "./DebriefingDialogue"
 import { useState } from "react"
 import images from "../data/images"
 
+const winry0 = {
+  width: "300px",
+  position: "absolute",
+  top: "15%",
+  left: "5%",
+}
+const winry1 = {
+  width: "300px",
+  position: "absolute",
+  top: "25%",
+  left: "5%",
+  transform: "rotate(180deg)",
+}
+
 const NextDialogue = ({ dialogueStep, setDialogueStep }) => {
   return <button onClick={() => setDialogueStep(dialogueStep + 1)}>NEXT</button>
 }
@@ -52,12 +66,7 @@ const Debriefing = () => {
           />
           <img
             src={images.winry.src}
-            style={{
-              width: "300px",
-              position: "absolute",
-              top: "15%",
-              left: "5%",
-            }}
+            style={dialogueStep === 0 ? winry0 : winry1}
           />
         </>
       )}

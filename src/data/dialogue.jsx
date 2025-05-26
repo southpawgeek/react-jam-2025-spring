@@ -317,7 +317,7 @@ export const briefingDialogue = [
   ],
   [
     <>
-      <Keyword keyword="chief" />: I'm happier now then when I have a plate of
+      <Keyword keyword="chief" />: I'm happier now than when I have a plate of
       fresh muffins in front of me, <Keyword keyword="agent" />. That formula
       was for a toxin that our enemies wanted to make a large batch of to cause
       some real damage.

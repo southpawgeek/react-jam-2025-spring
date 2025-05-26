@@ -31,6 +31,17 @@ const Lose = () => {
         src={images.playerAgent.src}
         style={{ width: "300px", position: "absolute", bottom: "10px" }}
       />
+      {currentLevel !== 2 && (
+        <img
+          src={npcUrl}
+          style={{
+            position: "absolute",
+            bottom: "0",
+            right: "0",
+            width: "250px",
+          }}
+        />
+      )}
       {currentLevel === 2 && (
         <img
           src={npcUrl}
