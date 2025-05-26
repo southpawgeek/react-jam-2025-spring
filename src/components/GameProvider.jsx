@@ -17,7 +17,7 @@ const GameProvider = ({ children }) => {
   const [done] = useSound(soundExit)
   const [move] = useSound(soundMove)
   const [dead] = useSound(soundDead)
-  const [kill] = useSound(soundKill)
+  const [kill] = useSound(soundKill, { volume: 0.05 })
 
   const [currentLevel, setCurrentLevel] = useState(0)
   const [availableScenes, setAvailableScenes] = useState(levels[0])

@@ -19,6 +19,16 @@ const Credits = () => {
           <strong>Code: </strong>Jen "Jowday" Guerra
         </li>
         <li>
+          <strong>Font: </strong>
+          <a
+            href="https://fonts.google.com/specimen/Happy+Monkey"
+            target="_blank"
+          >
+            Happy Monkey
+          </a>{" "}
+          (Google Fonts)
+        </li>
+        <li>
           <strong>Rendering Engine: </strong>
           <a
             href="https://react.pixijs.io/"
