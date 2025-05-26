@@ -23,13 +23,13 @@ const GameProvider = ({ children }) => {
     setCurrentText(availableScenes[index].defaultText)
     setCurrentNpcName(null)
     setInDialogue(false)
-    setCover(3)
     setDisplayType("location")
     setHasRevealed(false)
   }
 
   const goToMap = () => {
     setCurrentLevel(currentLevel)
+    setCover(3)
     setAvailableScenes(levels[currentLevel])
     setDisplayType("map")
   }

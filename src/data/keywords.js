@@ -18,7 +18,8 @@ const keywords = {
   },
   counterAgents: {
     name: "Counter-Agents",
-    description: "Enemy agents that could blow your cover.",
+    description:
+      "Enemy agents that will kill you if you reveal yourself to them.",
   },
   chief: {
     name: "Chief",

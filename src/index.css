@@ -240,6 +240,10 @@ button:hover {
   margin-right: 0.5rem;
 }
 
+.dialogue-click:hover {
+  color: var(--lightest);
+}
+
 .map-location {
   position: absolute;
 }
